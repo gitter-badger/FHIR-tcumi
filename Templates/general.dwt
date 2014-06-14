@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-Hant-TW">
 <head>
-  <title>FHIR Specification Home Page - FHIR v0.0.81</title>
+  <title>慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81</title>
 
   
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
@@ -38,7 +38,7 @@
 		<div class="container">  <!-- container -->
 			<a id="logo" href="http://hl7.org/fhir"><img alt="logo fhir" src="./assets/images/fhir-logo-www.png"/> </a>
 			<div id="hl7-status">
-				<b>DSTU Release 1.1</b>
+				<b>DSTU Release 1.1-慈濟大學-醫學資訊學系</b>
 			</div>       	
 			
 			<div id="hl7-nav">
