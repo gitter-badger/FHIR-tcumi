@@ -70,7 +70,7 @@
 						<ul class="nav navbar-nav">
                           <li><a href="index.html">Home-首頁</a></li>
                           <li><a href="documentation.html">Documentation-文件</a></li>
-                          <li><a href="implementation.html">Implementation-實做</a></li>
+                          <li><a href="implementation.html">Implementation-實作</a></li>
                           <li><a href="resourcelist.html">Resources-資源</a></li>
                           <li><a href="clinical.html">Clinical-臨床</a></li>
                           <li><a href="administration.html">Administrative-行政管理</a></li>
