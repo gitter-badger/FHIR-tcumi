@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE HTML>
-<html>
+<html lang="zh-Hant-TW"><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-  <title>Condition - FHIR v0.0.81</title>
+  <title>慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81</title>
 
   
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="http://hl7.org/fhir" name="author"/>
+  <meta content="慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81"  name="description" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
   <link rel="stylesheet" href="fhir.css"/>
 
@@ -37,7 +39,7 @@
 		<div class="container">  <!-- container -->
 			<a id="logo" href="http://hl7.org/fhir"><img alt="logo fhir" src="./assets/images/fhir-logo-www.png"/> </a>
 			<div id="hl7-status">
-				<b>DSTU Release 1.1</b>
+				<b>DSTU Release 1.1-慈濟大學-醫學資訊學系</b>
 			</div>       	
 			
 			<div id="hl7-nav">
@@ -67,14 +69,13 @@
 					<a class="navbar-brand hidden" href="index.html">FHIR</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
 						<ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="documentation.html">Documentation</a></li>
-              <li><a href="implementation.html">Implementation</a></li>
-              <li><a href="resourcelist.html">Resources</a></li>
-              <li><a href="clinical.html">Clinical</a></li>
-              <li><a href="administration.html">Administrative</a></li>
-              <li><a href="infrastructure.html">Infrastructure</a></li>
-
+                          <li><a href="index.html">Home-首頁</a></li>
+                          <li><a href="documentation.html">Documentation-文件</a></li>
+                          <li><a href="implementation.html">Implementation-實作</a></li>
+                          <li><a href="resourcelist.html">Resources-資源</a></li>
+                          <li><a href="clinical.html">Clinical-臨床</a></li>
+                          <li><a href="administration.html">Administrative-行政管理</a></li>
+                          <li><a href="infrastructure.html">Infrastructure-基礎建設</a></li>
 						</ul>
 					</div>  <!-- /.nav-collapse -->
 				</div>  <!-- /.container -->
@@ -89,22 +90,23 @@
 	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
 		<div class="container">  <!-- container -->	
 			<ul class="breadcrumb">
+				<!-- InstanceBeginEditable name="breadcrumb" -->
         <li><a href="index.html">Home</a></li>
         <li><a href="clinical.html">Clinical</a></li>        <li><b>Condition</b></li>          <!-- condition.html / resource -->
-
+                <!-- InstanceEndEditable -->  
 			</ul>	
 		</div>  <!-- /container -->
 	</div>  <!-- /segment-breadcrumb -->
 	
 
 	<div id="segment-content" class="segment">  <!-- segment-content -->
-	<div class="container">  <!-- container -->
+		<div class="container">  <!-- container -->
             <div class="row">
             	<div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
+  					<!-- CONTENT CONTENT -->
 
-
-<div class="col-9">
+					<div class="col-9">
+						<!-- InstanceBeginEditable name="inner-wrapper" -->
 
 <ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="condition-examples.html">Examples</a></li><li><a href="condition-definitions.html">Formal Definitions</a></li><li><a href="condition-mappings.html">Mappings</a></li><li><a href="condition-profiles.html">Profiles</a></li></ul>
 
@@ -112,7 +114,10 @@
   <!-- <p class="status">Status: null</p> -->
 
 <p> 
-Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. There are many uses including: recording a Diagnosis during an Encounter; populating a problem List or a Summary Statement, such as a Discharge Summary. 
+Use to record detailed information about conditions, problems or diagnoses recognized by a clinician. <br>
+ - 用來記錄關於病人的狀況, 問題或被醫生確認診斷的詳細資訊。 <br>
+There are many uses including: recording a Diagnosis during an Encounter; populating a problem List or a Summary Statement, such as a Discharge Summary. <br>
+ - 有很多用途包括：記錄一個問診期間的診斷;填入一個問題清單或摘要報告像是出院病摘。
 </p>
 
 
@@ -120,29 +125,32 @@ Use to record detailed information about conditions, problems or diagnoses recog
 <h2><span class="sectioncount">4.5.1<a name="4.5.1"> </a></span> Scope and Usage</h2>
 <p> 
 This resource is used to record detailed information about a specific aspect of or issue with 
-the health state of a patient. It is intended for use for issues that have been 
-identified as relevant for tracking and reporting purposes or where there's a 
-need to capture a concrete diagnosis or the gathering of data such as signs and 
-symptoms.  There are situations where the same information might 
-appear as both an observation as well as a condition.  For example, the 
-appearance of a rash or an instance of a fever are signs and symptoms that 
-would typically be captured using the Observation resource.  However, a 
-pattern of ongoing fevers or a persistent or severe rash requiring treatment 
-might be captured as a condition.  The Condition resource specifically 
-excludes AdverseReactions and AllergyIntolerances as those are handled 
-with their own resources.
+the health state of a patient. <br>
+ - 這個資源是被用於記錄關於病人健康狀態的定面向或問題的詳細資訊。<br>
+It is intended for use for issues that have been identified as relevant for tracking and reporting purposes or where there's a 
+need to capture a concrete diagnosis or the gathering of data such as signs and symptoms.  <br>
+ - 它是打算對於議題用於已被確定的相關追蹤和報告目的或者是否有一個需要擷取一個具體的診斷或資料蒐集，像是跡象或症狀。<br>
+There are situations where the same information might appear as both an observation as well as a condition.  <br>
+ - 有一種情況有相同的資訊可以顯示在 observation 和 condition 兩者。<br>
+For example, the appearance of a rash or an instance of a fever are signs and symptoms that would typically be captured using the Observation resource.  <br>
+ - 舉例，疹子或發燒案例的顯示是跡象和症狀通常可以用被 <strong>Observation 資源</strong> 擷取。<br>
+However, a pattern of ongoing fevers or a persistent or severe rash requiring treatment might be captured as a condition.  <br>
+ - 因此，持續發燒或持久的模式或嚴重的紅疹需要治療可以用 <strong>condition</strong> 擷取。<br>
+The Condition resource specifically excludes AdverseReactions and AllergyIntolerances as those are handled with their own resources.<br>
+ - Condition 資源特別是不包括 AdverseReactions 和 AllergyIntolerances，因為這些是用他們自己的資源處理。<br>
 </p>
 <p>
 The Condition resource may be used to record positive aspects of the health state
-of a patient (e.g. pregnancy) as well as the major use, which is for problems/concerns (e.g. hypertension).
+of a patient (e.g. pregnancy) as well as the major use, which is for problems/concerns (e.g. hypertension).<br>
+ - Condition 資源可以被用於記錄病人健康狀態的正向方面（例如，懷孕）和對於問題/關注的主要用途(例如，高血壓)。
 </p>
 <p>
-Conditions are frequently referenced by other resources as &quot;reasons&quot; for 
-an action (Prescription, Procedure, DiagnosticOrder, etc.)
+Conditions are frequently referenced by other resources as &quot;reasons&quot; for an action (Prescription, Procedure, DiagnosticOrder, etc.)<br>
+ - Conditions 是經常被其他資源參考，作為"理由"的動作(處方、程序、診斷醫令)。
 </p>
 <p>
-The conditions represented in this resources are sometimes described as 
-&quot;Problems&quot;, and kept as part of a problem list.
+The conditions represented in this resources are sometimes described as &quot;Problems&quot;, and kept as part of a problem list.<br>
+ - Conditions 在這個資源被代表為，有時是被作為 "問題" 描述，和被保留為問題清單的一部分。
 </p>
 </div>
 
@@ -223,7 +231,24 @@ Terminology Bindings
 <p> </p>
 
 
-<h3><span class="sectioncount">4.5.2.2<a name="4.5.2.2"> </a></span> Constraints</h3><ul><li><b title="Formal Invariant Identifier">Inv-1</b>: On Condition.stage: Stage SHALL have summary or assessment (xpath on f:Condition/f:stage: <span style="font-family: Courier New, monospace">exists(f:summary) or exists(f:assessment)</span>)</li><li><b title="Formal Invariant Identifier">Inv-2</b>: On Condition.evidence: evidence SHALL have code or details (xpath on f:Condition/f:evidence: <span style="font-family: Courier New, monospace">exists(f:code) or exists(f:detail)</span>)</li><li><b title="Formal Invariant Identifier">Inv-3</b>: On Condition.location: location SHALL have code or details (xpath on f:Condition/f:location: <span style="font-family: Courier New, monospace">exists(f:code) or exists(f:detail)</span>)</li><li><b title="Formal Invariant Identifier">Inv-4</b>: On Condition.relatedItem: Relationship SHALL have either a code or a target (xpath on f:Condition/f:relatedItem: <span style="font-family: Courier New, monospace">exists(f:code) != exists(f:target)</span>)</li></ul>
+<h3>
+	<span class="sectioncount">4.5.2.2<a name="4.5.2.2"> </a></span> 
+    Constraints - 限制
+</h3>
+<ul>
+	<li>
+    	<b title="Formal Invariant Identifier">Inv-1</b>: On Condition.stage: Stage SHALL have summary or assessment (xpath on f:Condition/f:stage: <span style="font-family: Courier New, monospace">exists(f:summary) or exists(f:assessment)</span>)
+	</li>
+    <li>
+    	<b title="Formal Invariant Identifier">Inv-2</b>: On Condition.evidence: evidence SHALL have code or details (xpath on f:Condition/f:evidence: <span style="font-family: Courier New, monospace">exists(f:code) or exists(f:detail)</span>)
+	</li>
+    <li>
+    	<b title="Formal Invariant Identifier">Inv-3</b>: On Condition.location: location SHALL have code or details (xpath on f:Condition/f:location: <span style="font-family: Courier New, monospace">exists(f:code) or exists(f:detail)</span>)
+	</li>
+    <li>
+    	<b title="Formal Invariant Identifier">Inv-4</b>: On Condition.relatedItem: Relationship SHALL have either a code or a target (xpath on f:Condition/f:relatedItem: <span style="font-family: Courier New, monospace">exists(f:code) != exists(f:target)</span>)
+	</li>
+</ul>
 
 
 <h3><span class="sectioncount">4.5.2.3<a name="4.5.2.3"> </a></span> Use of Condition.code</h3>
@@ -261,12 +286,9 @@ a value - instead, the value must be understood from the Condition.code.
 <tr><td>stage</td><td><a href="search.html#token">token</a></td><td>Simple summary (disease specific)</td><td>Condition.stage.summary</td></tr>
 <tr><td>status</td><td><a href="search.html#token">token</a></td><td>The status of the condition</td><td>Condition.status</td></tr>
 <tr><td>subject</td><td><a href="search.html#reference">reference</a></td><td>Who has the condition?</td><td>Condition.subject<br/>(<a href="patient.html">Patient</a>)</td></tr>
-</table>
-
-
-
-</div>
-
+</table>         
+                        <!-- InstanceEndEditable --> 
+					</div>
 
 				</div>  <!-- /inner-wrapper -->
             </div>  <!-- /row -->
@@ -279,10 +301,10 @@ a value - instead, the value must be understood from the Condition.code.
 		<div class="container">  <!-- container -->
 			<div class="inner-wrapper">
 				<p>
-        &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.0.81.2382) generated on Fri, May 9, 2014 11:15+1000.   <!-- <a href="qa.html">QA Report</a> -->   <!-- achive note -->
+        &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.0.81.2382) generated on Fri, May 9, 2014 11:16+1000.   <!-- <a href="qa.html">QA Report</a> -->   <!-- achive note -->
         <br/>
         <span style="color: #FFFF77">
-        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History</a> | <a href="license.html">License</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History 版本記錄</a> | <a href="license.html">License 許可證</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         </span>
         </p>
 			</div>  <!-- /inner-wrapper -->
@@ -311,5 +333,7 @@ a value - instead, the value must be understood from the Condition.code.
 ================================================== -->
 
     
+    
 </body>
-</html>
+<!-- InstanceEnd --></html>     
+          
