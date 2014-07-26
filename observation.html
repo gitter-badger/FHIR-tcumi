@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE HTML>
-<html>
+<html lang="zh-Hant-TW"><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-  <title>Observation - FHIR v0.0.81</title>
+  <title>慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81</title>
 
   
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="http://hl7.org/fhir" name="author"/>
+  <meta content="慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81"  name="description" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
   <link rel="stylesheet" href="fhir.css"/>
 
@@ -30,14 +32,17 @@
   <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
-
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+  
+  <!-- InstanceEndEditable -->
 </head>
 <body>
+	
 	<div id="segment-header" class="segment">  <!-- segment-header -->	
 		<div class="container">  <!-- container -->
 			<a id="logo" href="http://hl7.org/fhir"><img alt="logo fhir" src="./assets/images/fhir-logo-www.png"/> </a>
 			<div id="hl7-status">
-				<b>DSTU Release 1.1</b>
+				<b>DSTU Release 1.1-慈濟大學-醫學資訊學系</b>
 			</div>       	
 			
 			<div id="hl7-nav">
@@ -67,14 +72,13 @@
 					<a class="navbar-brand hidden" href="index.html">FHIR</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
 						<ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="documentation.html">Documentation</a></li>
-              <li><a href="implementation.html">Implementation</a></li>
-              <li><a href="resourcelist.html">Resources</a></li>
-              <li><a href="clinical.html">Clinical</a></li>
-              <li><a href="administration.html">Administrative</a></li>
-              <li><a href="infrastructure.html">Infrastructure</a></li>
-
+                          <li><a href="index.html">Home-首頁</a></li>
+                          <li><a href="documentation.html">Documentation-文件</a></li>
+                          <li><a href="implementation.html">Implementation-實作</a></li>
+                          <li><a href="resourcelist.html">Resources-資源</a></li>
+                          <li><a href="clinical.html">Clinical-臨床</a></li>
+                          <li><a href="administration.html">Administrative-行政管理</a></li>
+                          <li><a href="infrastructure.html">Infrastructure-基礎建設</a></li>
 						</ul>
 					</div>  <!-- /.nav-collapse -->
 				</div>  <!-- /.container -->
@@ -89,23 +93,23 @@
 	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
 		<div class="container">  <!-- container -->	
 			<ul class="breadcrumb">
+				<!-- InstanceBeginEditable name="breadcrumb" -->
         <li><a href="index.html">Home</a></li>
         <li><a href="clinical.html">Clinical</a></li>        <li><b>Observation</b></li>          <!-- observation.html / resource -->
-
+                <!-- InstanceEndEditable -->  
 			</ul>	
 		</div>  <!-- /container -->
 	</div>  <!-- /segment-breadcrumb -->
 	
 
 	<div id="segment-content" class="segment">  <!-- segment-content -->
-	<div class="container">  <!-- container -->
+		<div class="container">  <!-- container -->
             <div class="row">
             	<div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
+  					<!-- CONTENT CONTENT -->
 
-
-<div class="col-9">
-
+					<div class="col-9">
+						<!-- InstanceBeginEditable name="inner-wrapper" -->
 <ul class="nav nav-tabs"><li class="active"><a href="#">Content</a></li><li><a href="observation-examples.html">Examples</a></li><li><a href="observation-definitions.html">Formal Definitions</a></li><li><a href="observation-mappings.html">Mappings</a></li><li><a href="observation-profiles.html">Profiles</a></li></ul>
 
 <h1><span class="sectioncount">4.15<a name="4.15"> </a></span> Resource Observation - Content</h1>
@@ -117,28 +121,31 @@ Measurements and simple assertions made about a patient, device or other subject
 
 
 <div>
-<h2><span class="sectioncount">4.15.1<a name="4.15.1"> </a></span> Scope and Usage</h2>
+<h2><span class="sectioncount">4.15.1<a name="4.15.1"> </a></span> Scope and Usage - 範疇與用途</h2>
 <p>
-Observations are a central element in healthcare, used to support diagnosis, monitor progress, determine baselines and patterns 
-and even capture demographic characteristics.  Most observations are simple name/value pair assertions with some metadata, 
-but some observations group other observations together logically, or even are multi-component observations.
-Note that the resources  <a href="diagnosticreport.html">DiagnosticReport</a> and <a href="deviceobservationreport.html">DeviceObservationReport</a>
-provide a clinical or workflow context for a set of observations. Expected uses for the Observation resource include:
+Observations are a central element in healthcare, used to support diagnosis, monitor progress, determine baselines and patterns and even capture demographic characteristics.  <br>
+ - 觀察資料在健康照護是核心要素，被用於支持診斷、監測進展情況、確定基線和樣式，甚至是擷取人口特徵。<br>
+Most observations are simple name/value pair assertions with some metadata, but some observations group other observations together logically, or even are multi-component observations.<br>
+ - 多數的觀察資料是主張 name/value pair 伴隨著一些metadata 成一對，但一些觀察資料與其他觀察資料群組在一起，或甚至是多組成份的觀察資料。<br>
+Note that the resources  <a href="diagnosticreport.html">DiagnosticReport</a> and <a href="deviceobservationreport.html">DeviceObservationReport</a> provide a clinical or workflow context for a set of observations. <br>
+ - 注意，資源 "DiagnosticReport (診斷報告)" 和 "DeviceObservationReport (裝置觀察報告)" 對於觀察集合，提供一個臨床或工作流程：<br>
+Expected uses for the Observation resource include:<br>
+ - 期望對於 "觀察資料" 資源的用途包括︰<br>
 </p>
 <ul>
-  <li>Vital signs: temperature, blood pressure, respiration rate</li>
-	<li>Laboratory Data and other Diagnostic Measures</li>
-	<li>Measurements emitted by Devices</li>
-  <li>Clinical assessments such as APGAR</li>
-  <li>Personal characteristics: height, weight, eye-color</li>
-  <li>Diagnoses (Note: trackable conditions, allergies, adverse reactions and more complex structures are handled elsewhere)</li>
-  <li>Social history: tobacco use, family supports, cognitive status</li>
-  <li>Core characteristics: pregnancy status, death assertion</li>
+  <li>Vital signs: temperature, blood pressure, respiration rate<br> - 生命徵象︰體溫、血壓、呼吸率</li>
+  <li>Laboratory Data and other Diagnostic Measures<br> - 實驗室資料和其他診斷測量</li>
+  <li>Measurements emitted by Devices<br> - 由裝置發出的量測值。</li>
+  <li>Clinical assessments such as APGAR<br> - 臨床評估，像是 APGAR</li>
+  <li>Personal characteristics: height, weight, eye-color<br> - 個人特徵︰身高、體重、眼睛顏色</li>
+  <li>Diagnoses (Note: trackable conditions, allergies, adverse reactions and more complex structures are handled elsewhere)<br> - 診斷(注意︰可追蹤的情況、過敏、不良反應和在其他地方被處理的更複雜結構)</li>
+  <li>Social history: tobacco use, family supports, cognitive status<br> - 社交史︰刺青、家庭支持、認知狀態。</li>
+  <li>Core characteristics: pregnancy status, death assertion<br> - 核心特徵︰懷孕狀態、死亡證明</li>
 </ul>
 </div>
 
 <div>
-<h2><span class="sectioncount">4.15.2<a name="4.15.2"> </a></span> Background and Context</h2>
+<h2><span class="sectioncount">4.15.2<a name="4.15.2"> </a></span> Background and Context - 背景與近況</h2>
 <p>
 The observation resource has the following aspects:
 </p>
@@ -240,47 +247,56 @@ Terminology Bindings
 
 <ul>
   <li>
-    The element, Observation.value[x], has a variable name depending on the type as follows:
+    The element, Observation.value[x], has a variable name depending on the type as follows:<br>
+    - 元素，Observation.value[x]，變數名稱取決於型態如下：<br>
     <ul>
-     <li>valueQuantity</li>
-     <li>valueCodeableConcept</li>
-     <li>valueAttachment</li>
-     <li>valueRatio</li>
-     <li>valuePeriod</li>
-     <li>valueSampledData</li>
-     <li>valueString</li>
+     <li>valueQuantity - 數量</li>
+     <li>valueCodeableConcept - 可編碼的概念</li>
+     <li>valueAttachment - 附件</li>
+     <li>valueRatio - 比率</li>
+     <li>valuePeriod - 週期</li>
+     <li>valueSampledData - 抽樣資料</li>
+     <li>valueString - 字串</li>
     </ul>
   </li>
   <li>
-    The appliesDateTime or appliesPeriod is the time that the observation is most 
-    relevant as an observation of the subject. For a biological subject (e.g. a human patient), 
-    this is the physiologically relevant time of the observation. 
-	In the case of an observation using a specimen, this represents the start and 
-    end of the specimen collection (e.g. 24 hour Urine Sodium), but if the collection time is 
-    sufficiently short, this is reported as a point in time value (e.g. normal venepuncture). 
-    In the case of an observation obtained directly from a subject (e.g., BP, 
-    Chest X-ray), this is the start and end time of the observation process, which again, is 
-    often reported as a single point in time.
+    The appliesDateTime or appliesPeriod is the time that the observation is most relevant as an observation of the subject. <br>
+    - <strong>appliesDateTime</strong> 或 <strong>appliesPeriod</strong> 是作為與大部分受測對象相關的觀察時間。<br>
+    For a biological subject (e.g. a human patient), this is the physiologically relevant time of the observation. <br>
+    - 對於生物受測對象(例如，一位人類病人），這是生理學相關的觀察時間。<br>
+    In the case of an observation using a specimen, this represents the start and end of the specimen collection (e.g. 24 hour Urine Sodium), but if the collection time is sufficiently short, this is reported as a point in time value (e.g. normal venepuncture). <br>
+    - 在使用標本觀察資料的例子之中，這代表標本收集的開始到結束(例如，24 小時的尿液鈉收集)，但如果收集時間是足夠短的，這是被記錄為在時間值的一點(例如，正常靜脈穿刺)。<br>
+    In the case of an observation obtained directly from a subject (e.g., BP, Chest X-ray), this is the start and end time of the observation process, which again, is often reported as a single point in time.<br>
+    - 在一個從受測者直接獲得的觀察資料例子之中(例如，血壓、胸腔 X 光)，觀察程序開始和結束的時間，經常被記錄為在時間的一個單一點。<br>
   </li>
   <li>
-    At its simplest, resource instances can consist of only a type and a value, with a reliability and status flag.  
-    The relevance of other properties will vary based on the type of observation.  
-	Reference ranges may be useful for lab tests and other measures like systolic blood pressure, but will have little 
-	relevance for something like &quot;pregnancy status&quot;
+    At its simplest, resource instances can consist of only a type and a value, with a reliability and status flag.  <br>
+    - <br>
+    The relevance of other properties will vary based on the type of observation.  <br>
+    - <br>
+	Reference ranges may be useful for lab tests and other measures like systolic blood pressure, but will have little relevance for something like &quot;pregnancy status&quot;<br>
+    - <br>
   </li>
   <li>
-    Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g. specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties
+    Most observations only have one generic reference range. Systems MAY choose to restrict to only supplying the relevant reference range based on knowledge about the patient (e.g. specific to the patient's age, gender, weight and other factors), but this may not be possible or appropriate. <br>
+    - <br>
+    Whenever more than one reference range is supplied, the differences between them SHOULD be provided in the reference range and/or age properties.<br>
+    - <br>
   </li>
   <li>
-    Profiles will be created to provide guidance on capturing certain types 
-    of simple observations.  This resource focuses on the level of detail
-    captured by most systems.  However, any &quot;simple&quot; observation can easily 
-	be broken into numerous components and sub-components to provide additional
-    information relevant in certain circumstances.  As with other resources, 
-	extensions can be used to introduce this additional complexity.
+    Profiles will be created to provide guidance on capturing certain types of simple observations.  <br>
+    This resource focuses on the level of detail captured by most systems.  <br>
+    - <br>
+    However, any &quot;simple&quot; observation can easily be broken into numerous components and sub-components to provide additional information relevant in certain circumstances.  <br>
+    - <br>    
+    As with other resources, extensions can be used to introduce this additional complexity.<br>
+    - <br>
  </li>
  <li>
-   Because there are multiple types allowed for the <i>value</i> element, multiple value search parameters are defined. There is no standard parameter for searching values of type Attachment, or Ratio
+   Because there are multiple types allowed for the <i>value</i> element, multiple value search parameters are defined. <br>
+    - <br>   
+   There is no standard parameter for searching values of type Attachment, or Ratio.<br>
+    - <br>
  </li>
 </ul>
 
@@ -309,11 +325,9 @@ Terminology Bindings
 <tr><td>value-quantity</td><td><a href="search.html#quantity">quantity</a></td><td>The value of the observation, if the value is a Quantity, or a SampledData (just search on the bounds of the values in sampled data)</td><td>Observation.value[x]</td></tr>
 <tr><td>value-string</td><td><a href="search.html#string">string</a></td><td>The value of the observation, if the value is a string, and also searches in CodeableConcept.text</td><td>Observation.value[x]</td></tr>
 </table>
-
-
-
-</div>
-
+  
+                        <!-- InstanceEndEditable --> 
+					</div>
 
 				</div>  <!-- /inner-wrapper -->
             </div>  <!-- /row -->
@@ -326,10 +340,10 @@ Terminology Bindings
 		<div class="container">  <!-- container -->
 			<div class="inner-wrapper">
 				<p>
-        &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.0.81.2382) generated on Fri, May 9, 2014 11:15+1000.   <!-- <a href="qa.html">QA Report</a> -->   <!-- achive note -->
+        &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.0.81.2382) generated on Fri, May 9, 2014 11:16+1000.   <!-- <a href="qa.html">QA Report</a> -->   <!-- achive note -->
         <br/>
         <span style="color: #FFFF77">
-        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History</a> | <a href="license.html">License</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History 版本記錄</a> | <a href="license.html">License 許可證</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         </span>
         </p>
 			</div>  <!-- /inner-wrapper -->
@@ -354,9 +368,15 @@ Terminology Bindings
 
 <script src="./assets/js/fhir.js"> </script>
 
+<!-- InstanceBeginEditable name="EditRegion4" -->
+
+<!-- InstanceEndEditable -->
+
   <!-- Analytics Below
 ================================================== -->
 
     
+    
 </body>
-</html>
+<!-- InstanceEnd --></html>     
+          

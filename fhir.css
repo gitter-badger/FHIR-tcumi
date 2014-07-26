@@ -33,7 +33,7 @@ i.inherited {
 p, li {
 	font-size: 15px;
 	line-height: 1.4em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	margin: 0 0 20px 0;
 	font-weight: normal;
 }
@@ -49,7 +49,7 @@ a.dict {
 td {
 	font-size: 15px;
 	line-height: 1.4em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: normal;
 	padding: 3px;
 	vertical-align: top;
@@ -58,7 +58,7 @@ td {
 tr {
 	font-size: 15px;
 	line-height: 1.4em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: normal;
 	padding: 3px;
 	vertical-align: top;
@@ -76,7 +76,7 @@ table.dict td {
         padding:3px 7px 2px 7px;
 	font-size: 11px;
 	line-height: 1.2em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: normal;
 	padding: 3px;
 	vertical-align: top;
@@ -86,7 +86,7 @@ table.dict td.structure {
         padding:3px 7px 2px 7px;
 	font-size: 15px;
 	line-height: 1.2em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: bold;
 	padding: 3px;
 	vertical-align: top;
@@ -110,7 +110,7 @@ table.codes td {
         padding:3px 7px 2px 7px;
 	font-size: 15px;
 	line-height: 1.4em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: normal;
 	padding: 3px;
 	vertical-align: top;
@@ -128,7 +128,7 @@ table.grid th {
         padding:3px 7px 2px 7px;
 	font-size: 15px;
 	line-height: 1.4em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: bold;
 	padding: 3px;
 	vertical-align: top;
@@ -140,7 +140,7 @@ table.grid td {
         padding:3px 7px 2px 7px;
 	font-size: 15px;
 	line-height: 1.4em;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	font-weight: normal;
 	padding: 3px;
 	vertical-align: top;
@@ -161,13 +161,13 @@ li {
 h1 {
 	font-size: 16px;
 	margin: 0 0 4px 0;
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	border-bottom: 1px solid #7e7e7e;
 	padding-bottom: 2px;
 }
 
 h2 {
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	line-height: 1.2em;
 	font-size: 14px;
 	margin: 0 0 3px 0;
@@ -178,7 +178,7 @@ h2 {
 
 
 h3 {
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	line-height: 1.2em;
 	font-size: 15px;
 	margin: 0 0 3px 0;
@@ -186,7 +186,7 @@ h3 {
 }
 
 h4 {
-	font-family: verdana;
+	font-family:"微軟正黑體", verdana;
 	line-height: 1.2em;
 	font-size: 11px;
 	margin: 0 0 3px 0;
@@ -287,7 +287,7 @@ pre.json             {
 }
 
 pre.xml              {
-	font-family: 'Courier New';
+	font-family:"微軟正黑體", 'Courier New';
  	font-size: 9pt;
         padding: 2px;
         background: #F0FFFF ; 
@@ -332,7 +332,7 @@ ul.navtop
 {
   list-style: none outside none;
   display: block;
-  font-family: sans serif;
+  font-family:"微軟正黑體", sans serif;
   margin: 0 0 8px 0;
   padding:0px;
 }
@@ -471,7 +471,7 @@ x-margin-right: 30px;
 }
 
 @font-face {
-    font-family: 'OpenSansCondensedLight';
+    font-family:"微軟正黑體", 'OpenSansCondensedLight';
     src: url('OpenSans-CondLight-webfont.eot');
     src: url('OpenSans-CondLight-webfont.eot?#iefix') format('embedded-opentype'),
          url('OpenSans-CondLight-webfont.woff') format('woff'),
@@ -483,7 +483,7 @@ x-margin-right: 30px;
 }
 
 @font-face {
-    font-family: 'OpenSansCondensedBold';
+    font-family:"微軟正黑體", 'OpenSansCondensedBold';
     src: url('OpenSans-CondBold-webfont.eot');
     src: url('OpenSans-CondBold-webfont.eot?#iefix') format('embedded-opentype'),
          url('OpenSans-CondBold-webfont.woff') format('woff'),
@@ -497,19 +497,19 @@ x-margin-right: 30px;
 .diagram-class-title {
 	font-size: 1em; 
 	text-anchor: middle; 
-	font-family: OpenSansCondensedLight; 
+	font-family:"微軟正黑體", OpenSansCondensedLight; 
 	font-weight: regular;
 }
 
 .diagram-resource {
-	font-family: OpenSansCondensedBold;
+	font-family:"微軟正黑體", OpenSansCondensedBold;
 	font-weight: bold;
 }
 
 .diagram-class-title-link {
 	font-size: .9em; 
 	text-anchor: middle; 
-	font-family: OpenSansCondensedLight; 
+	font-family:"微軟正黑體", OpenSansCondensedLight; 
 	font-weight: regular;
 }
 
@@ -520,14 +520,14 @@ x-margin-right: 30px;
 .diagram-class-detail {
 	font-size: .8em; 
 	text-anchor: left; 
-	font-family: OpenSansCondensedLight; 
+	font-family:"微軟正黑體", OpenSansCondensedLight; 
 	font-weight: regular;
 }
 
 .diagram-class-linkage {
 	font-size: .9em; 
 	text-anchor: middle; 
-	font-family: OpenSansCondensedLight; 
+	font-family:"微軟正黑體", OpenSansCondensedLight; 
 	font-weight: regular;
 	opacity: 1;
 }

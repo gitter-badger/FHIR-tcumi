@@ -33,7 +33,7 @@
   <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
   <!-- InstanceBeginEditable name="EditRegion3" -->
-  
+  <link rel="stylesheet" href="./assets/css/style.css"/>
   <!-- InstanceEndEditable -->
 </head>
 <body>
@@ -94,14 +94,7 @@
 		<div class="container">  <!-- container -->	
 			<ul class="breadcrumb">
 				<!-- InstanceBeginEditable name="breadcrumb" -->
-
-        		<li><a href="index.html">Home</a></li>
-        		<li><a href="documentation.html">Documentation</a></li>        
-                <li><a href="terminologies.html">Using Codes</a></li>        
-                <li><a href="terminologies-conceptmaps.html">Concept Maps</a></li>        
-                <li><b>Example</b></li>        
-                <!-- address-use-map-v2.html / conceptmap-instance -->
-       
+                             
                 <!-- InstanceEndEditable -->  
 			</ul>	
 		</div>  <!-- /container -->
@@ -116,30 +109,8 @@
 
 					<div class="col-9">
 						<!-- InstanceBeginEditable name="inner-wrapper" -->
-
-<!-- CONTENT CONTENT -->
-
-
-<div class="col-9">
-
-<h1>Address-use-map-v2</h1>
-
-<p>
-
-This is the narrative for the resource. See also the <a href="address-use-map-v2.xml.html">XML</a> or <a href="address-use-map-v2.json.html">JSON</a> format.
-</p>
-
-<div><h2>v2 map for AddressUse (http://hl7.org/fhir/cm/v2/address-use)</h2><p>Mapping from <a href="address-use.html">http://hl7.org/fhir/vs/address-use</a> to <a href="v2/0190/index.html">http://hl7.org/fhir/v2/vs/0190</a></p><p>Draft. Published on 9-May 2014 11:15 by HL7 (FHIR Project) (<a href="http://hl7.org/fhir">http://hl7.org/fhir</a>, <a href="mailto:fhir@lists.hl7.org">fhir@lists.hl7.org</a>). </p><p>v2 Map (0190)</p><br/><table class="grid"><tr><td><b>Source Code</b></td><td><b>Equivalence</b></td><td><b>Destination Code</b></td><td><b>Comments</b></td></tr><tr><td>home</td><td>equivalent</td><td>H (Home)</td><td/></tr><tr><td>work</td><td>equivalent</td><td>O (Office/Business)</td><td/></tr><tr><td>temp</td><td>equivalent</td><td>C (Current Or Temporary)</td><td/></tr><tr><td>old</td><td>narrower</td><td>BA (Bad address)</td><td>unclear about old addresses</td></tr></table></div>
-
-<p>
-<!-- spacer -->
-&nbsp;
-</p>
-
-</div>
-
-             
-                <!-- InstanceEndEditable --> 
+                        <div id="cy"></div>   
+                        <!-- InstanceEndEditable --> 
 					</div>
 
 				</div>  <!-- /inner-wrapper -->
@@ -182,7 +153,8 @@ This is the narrative for the resource. See also the <a href="address-use-map-v2
 <script src="./assets/js/fhir.js"> </script>
 
 <!-- InstanceBeginEditable name="EditRegion4" -->
-
+<script src="./assets/js/cytoscape.min.js"></script>
+<script src="./assets/js/data.js"></script>  
 <!-- InstanceEndEditable -->
 
   <!-- Analytics Below

@@ -59,7 +59,7 @@ audio:not([controls]) {
   display: none;
 }
 html {
-  font-family: sans-serif;
+  font-family:"微軟正黑體", sans-serif;
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
 }
@@ -100,7 +100,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, serif;
+  font-family:"微軟正黑體", monospace, serif;
   font-size: 1em;
 }
 pre {
@@ -147,7 +147,7 @@ button,
 input,
 select,
 textarea {
-  font-family: inherit;
+  font-family:"微軟正黑體", inherit;
   font-size: 100%;
   margin: 0;
 }
@@ -280,7 +280,7 @@ html {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微軟正黑體", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.428571429;
   color: #333333;
@@ -290,7 +290,7 @@ input,
 button,
 select,
 textarea {
-  font-family: inherit;
+  font-family:"微軟正黑體", inherit;
   font-size: inherit;
   line-height: inherit;
 }
@@ -387,7 +387,7 @@ h6,
 .h4,
 .h5,
 .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微軟正黑體", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 1.1;
 }
@@ -596,7 +596,7 @@ address {
 }
 code,
 pre {
-  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-family:"微軟正黑體", Monaco, Menlo, Consolas, "Courier New", monospace;
 }
 code {
   padding: 2px 4px;
@@ -1196,7 +1196,7 @@ select[size] {
 select optgroup {
   font-size: inherit;
   font-style: inherit;
-  font-family: inherit;
+  font-family:"微軟正黑體", inherit;
 }
 input[type="file"]:focus,
 input[type="radio"]:focus,
@@ -3761,7 +3761,7 @@ a.list-group-item.active > .badge,
   height: 20px;
   margin-top: -10px;
   margin-left: -10px;
-  font-family: serif;
+  font-family:"微軟正黑體", serif;
 }
 .carousel-control .icon-prev:before {
   content: '\2039';
@@ -4106,7 +4106,7 @@ td.visible-print {
  *  Work: Lead Product Designer @ http://kyruus.com
  */
 @font-face {
-  font-family: 'FontAwesome';
+  font-family:"微軟正黑體", 'FontAwesome';
   src: url('../font/fontawesome-webfont.eot?v=3.0.1');
   src: url('../font/fontawesome-webfont.eot?#iefix&v=3.0.1') format('embedded-opentype'), url('../font/fontawesome-webfont.woff?v=3.0.1') format('woff'), url('../font/fontawesome-webfont.ttf?v=3.0.1') format('truetype');
   font-weight: normal;
@@ -4116,7 +4116,7 @@ td.visible-print {
     ------------------------------------------------------- */
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: FontAwesome;
+  font-family:"微軟正黑體", FontAwesome;
   font-weight: normal;
   font-style: normal;
   text-decoration: inherit;
@@ -5196,7 +5196,7 @@ h4,
 h5,
 h6 {
   margin: 0 0 0.4em 0;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family:"微軟正黑體", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: 500;
   line-height: 20px;
   color: #000000;
