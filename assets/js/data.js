@@ -8,7 +8,7 @@ $('#cy').cytoscape(
 			{
 			  selector: 'node',
 			  css: {
-				'font-size': 15,
+				'font-size': 12,
 				'content': 'data(name)',
 				'text-valign': 'center',
 				'color': 'white',
@@ -147,54 +147,54 @@ $('#cy').cytoscape(
 		 ],
 		 elements: {
 			nodes: [		
-				{ data: { id: "1", name: "AdverseReaction", "node_type":"query", score:456.0, parent:"-1"  } },
-				{ data: { id: "2", name: "AllergyIntolerance", "node_type":"query", score:258.0, parent:"-1"  } },
-				{ data: { id: "3", name: "CarePlan", "node_type":"query", score:159.0, parent:"-1"  } },
-				{ data: { id: "4", name: "Condition", "node_type":"query", score:370.0, parent:"-1"  } },
-				{ data: { id: "5", name: "FamilyHistory", "node_type":"query", score:165.0, parent:"-1"  } },
-				{ data: { id: "6", name: "Procedure", "node_type":"query", score:274.0, parent:"-1"  } },
-				{ data: { id: "7", name: "Questionnaire", "node_type":"query", score:64.0, parent:"-1"  } },
-				{ data: { id: "8", name: "Medication", "node_type":"query", score:822.0, parent:"-2"  } },
-				{ data: { id: "9", name: "MedicationPrescription", "node_type":"query", score:504.0, parent:"-2"  } },
-				{ data: { id: "10", name: "MedicationAdministration", "node_type":"query", score:290.0, parent:"-2"  } },
-				{ data: { id: "11", name: "MedicationDispense", "node_type":"query", score:183.0, parent:"-2"  } },
-				{ data: { id: "12", name: "MedicationStatement", "node_type":"query", score:298.0, parent:"-2"  } },
-				{ data: { id: "13", name: "Immunization", "node_type":"query", score:415.0, parent:"-2"  } },
-				{ data: { id: "14", name: "ImmunizationRecommendation", "node_type":"query", score:192.0, parent:"-2"  } },
-				{ data: { id: "15", name: "Observation", "node_type":"query", score:770.0, parent:"-3"  } },
-				{ data: { id: "16", name: "DiagnosticReport", "node_type":"query", score:198.0, parent:"-3"  } },
-				{ data: { id: "17", name: "DiagnosticOrder", "node_type":"query", score:435.0, parent:"-3"  } },
-				{ data: { id: "18", name: "ImagingStudy", "node_type":"query", score:322.0, parent:"-3"  } },
-				{ data: { id: "19", name: "Specimen", "node_type":"query", score:564.0, parent:"-3"  } },
-				{ data: { id: "20", name: "DeviceObservationReport", "node_type":"query", score:210.0, parent:"-4"  } },
-				{ data: { id: "21", name: "Patient", "node_type":"query", score:4085.0, parent:"-5"  } },
-				{ data: { id: "22", name: "RelatedPerson", "node_type":"query", score:948.0, parent:"-5"  } },
-				{ data: { id: "23", name: "Practitioner", "node_type":"query", score:3786.0, parent:"-5"  } },
-				{ data: { id: "24", name: "Organization", "node_type":"query", score:2206.0, parent:"-5"  } },
-				{ data: { id: "25", name: "Device", "node_type":"query", score:2475.0, parent:"-6"  } },
-				{ data: { id: "26", name: "Location", "node_type":"query", score:1992.0, parent:"-6"  } },
-				{ data: { id: "27", name: "Substance", "node_type":"query", score:993.0, parent:"-6"  } },
-				{ data: { id: "28", name: "Group", "node_type":"query", score:1258.0, parent:"-6"  } },
-				{ data: { id: "29", name: "Encounter", "node_type":"query", score:1140.0, parent:"-7"  } },
-				{ data: { id: "30", name: "Alert", "node_type":"query", score:110.0, parent:"-7"  } },
-				{ data: { id: "31", name: "Supply", "node_type":"query", score:112.0, parent:"-7"  } },
-				{ data: { id: "32", name: "Order", "node_type":"query", score:246.0, parent:"-7"  } },
-				{ data: { id: "33", name: "OrderResponse", "node_type":"query", score:116.0, parent:"-7"  } },
-				{ data: { id: "34", name: "List", "node_type":"query", score:118.0, parent:"-8"  } },
-				{ data: { id: "35", name: "Media", "node_type":"query", score:390.0, parent:"-8"  } },
-				{ data: { id: "36", name: "Other", "node_type":"query", score:122.0, parent:"-8"  } },
-				{ data: { id: "37", name: "Provenance", "node_type":"query", score:124.0, parent:"-8"  } },
-				{ data: { id: "38", name: "SecurityEvent", "node_type":"query", score:126.0, parent:"-8"  } },
-				{ data: { id: "39", name: "Composition", "node_type":"query", score:128.0, parent:"-9"  } },
-				{ data: { id: "40", name: "DocumentReference", "node_type":"query", score:270.0, parent:"-9"  } },
-				{ data: { id: "41", name: "DocumentManifest", "node_type":"query", score:132.0, parent:"-9"  } },
-				{ data: { id: "42", name: "MessageHeader", "node_type":"query", score:134.0, parent:"-10"  } },
-				{ data: { id: "43", name: "OperationOutcome", "node_type":"query", score:279.0, parent:"-10"  } },
-				{ data: { id: "44", name: "Query", "node_type":"query", score:138.0, parent:"-10"  } },
-				{ data: { id: "45", name: "Conformance", "node_type":"query", score:140.0, parent:"-11"  } },
-				{ data: { id: "46", name: "ValueSet", "node_type":"query", score:580.0, parent:"-11"  } },
-				{ data: { id: "47", name: "Profile", "node_type":"query", score:291.0, parent:"-11"  } },
-				{ data: { id: "48", name: "ConceptMap", "node_type":"query", score:146.0, parent:"-11"  } },
+				{ data: { id: "1", name: "AdverseReaction", "node_type":"", score:456.0, parent:"-1"  }},
+				{ data: { id: "2", name: "AllergyIntolerance", "node_type":"", score:258.0, parent:"-1"  } },
+				{ data: { id: "3", name: "CarePlan", "node_type":"", score:159.0, parent:"-1"  } },
+				{ data: { id: "4", name: "Condition", "node_type":"", score:370.0, parent:"-1"  } },
+				{ data: { id: "5", name: "FamilyHistory", "node_type":"", score:165.0, parent:"-1"  } },
+				{ data: { id: "6", name: "Procedure", "node_type":"", score:274.0, parent:"-1"  } },
+				{ data: { id: "7", name: "Questionnaire", "node_type":"", score:64.0, parent:"-1"  } },
+				{ data: { id: "8", name: "Medication", "node_type":"", score:822.0, parent:"-2"  } },
+				{ data: { id: "9", name: "MedicationPrescription", "node_type":"", score:504.0, parent:"-2"  } },
+				{ data: { id: "10", name: "MedicationAdministration", "node_type":"", score:290.0, parent:"-2"  } },
+				{ data: { id: "11", name: "MedicationDispense", "node_type":"", score:183.0, parent:"-2"  } },
+				{ data: { id: "12", name: "MedicationStatement", "node_type":"", score:298.0, parent:"-2"  } },
+				{ data: { id: "13", name: "Immunization", "node_type":"", score:415.0, parent:"-2"  } },
+				{ data: { id: "14", name: "ImmunizationRecommendation", "node_type":"", score:192.0, parent:"-2"  } },
+				{ data: { id: "15", name: "Observation", "node_type":"", score:770.0, parent:"-3"  } },
+				{ data: { id: "16", name: "DiagnosticReport", "node_type":"", score:198.0, parent:"-3"  } },
+				{ data: { id: "17", name: "DiagnosticOrder", "node_type":"", score:435.0, parent:"-3"  } },
+				{ data: { id: "18", name: "ImagingStudy", "node_type":"", score:322.0, parent:"-3"  } },
+				{ data: { id: "19", name: "Specimen", "node_type":"", score:564.0, parent:"-3"  } },
+				{ data: { id: "20", name: "DeviceObservationReport", "node_type":"", score:210.0, parent:"-4"  } },
+				{ data: { id: "21", name: "Patient", "node_type":"", score:4085.0, parent:"-5"  } },
+				{ data: { id: "22", name: "RelatedPerson", "node_type":"", score:948.0, parent:"-5"  } },
+				{ data: { id: "23", name: "Practitioner", "node_type":"", score:3786.0, parent:"-5"  } },
+				{ data: { id: "24", name: "Organization", "node_type":"", score:2206.0, parent:"-5"  } },
+				{ data: { id: "25", name: "Device", "node_type":"", score:2475.0, parent:"-6"  } },
+				{ data: { id: "26", name: "Location", "node_type":"", score:1992.0, parent:"-6"  } },
+				{ data: { id: "27", name: "Substance", "node_type":"", score:993.0, parent:"-6"  } },
+				{ data: { id: "28", name: "Group", "node_type":"", score:1258.0, parent:"-6"  } },
+				{ data: { id: "29", name: "Encounter", "node_type":"", score:1140.0, parent:"-7"  } },
+				{ data: { id: "30", name: "Alert", "node_type":"", score:110.0, parent:"-7"  } },
+				{ data: { id: "31", name: "Supply", "node_type":"", score:112.0, parent:"-7"  } },
+				{ data: { id: "32", name: "Order", "node_type":"", score:246.0, parent:"-7"  } },
+				{ data: { id: "33", name: "OrderResponse", "node_type":"", score:116.0, parent:"-7"  } },
+				{ data: { id: "34", name: "List", "node_type":"", score:118.0, parent:"-8"  } },
+				{ data: { id: "35", name: "Media", "node_type":"", score:390.0, parent:"-8"  } },
+				{ data: { id: "36", name: "Other", "node_type":"", score:122.0, parent:"-8"  } },
+				{ data: { id: "37", name: "Provenance", "node_type":"", score:124.0, parent:"-8"  } },
+				{ data: { id: "38", name: "SecurityEvent", "node_type":"", score:126.0, parent:"-8"  } },
+				{ data: { id: "39", name: "Composition", "node_type":"", score:128.0, parent:"-9"  } },
+				{ data: { id: "40", name: "DocumentReference", "node_type":"", score:270.0, parent:"-9"  } },
+				{ data: { id: "41", name: "DocumentManifest", "node_type":"", score:132.0, parent:"-9"  } },
+				{ data: { id: "42", name: "MessageHeader", "node_type":"", score:134.0, parent:"-10"  } },
+				{ data: { id: "43", name: "OperationOutcome", "node_type":"", score:279.0, parent:"-10"  } },
+				{ data: { id: "44", name: "Query", "node_type":"", score:138.0, parent:"-10"  }, position: {x: 807.9372, y: 257.6839 }, selected: false, selectable: false, locked: false, grabbable: true},
+				{ data: { id: "45", name: "Conformance", "node_type":"", score:140.0, parent:"-11"  }, position: {x:303.7692, y:252.1146}, selected: false, selectable: false,  locked: false, grabbable: true },
+				{ data: { id: "46", name: "ValueSet", "node_type":"", score:580.0, parent:"-11"  }, position: {x: 347, y: 309 }, selected: false, selectable: false,  locked: false, grabbable: true},
+				{ data: { id: "47", name: "Profile", "node_type":"", score:291.0, parent:"-11"  }, position: {x:263.3705, y:321.0268}, selected: false, selectable: false,  locked: false, grabbable: true},
+				{ data: { id: "48", name: "ConceptMap", "node_type":"", score:146.0, parent:"-11"  }},
 			],
 			edges: [
 				 { data: { source: "2", target: "1" } },
@@ -408,17 +408,17 @@ $('#cy').cytoscape(
 			fit: true, // whether to fit the viewport to the graph
 			ready: undefined, // callback on layoutready
 			stop: undefined, // callback on layoutstop
-			padding: 15, // the padding on fit
-			startAngle: 3/2 * Math.PI, // the position of the first node
+			padding: 10, // the padding on fit
+			startAngle: (-1/6) * Math.PI, // the position of the first node
 			counterclockwise: true, // whether the layout should go counterclockwise (true) or clockwise (false)
-			minNodeSpacing: 5, // min spacing between outside of nodes (used for radius adjustment)
+			minNodeSpacing: 20, // min spacing between outside of nodes (used for radius adjustment)
 			height: undefined, // height of layout area (overrides container height)
 			width: undefined, // width of layout area (overrides container width)
 			concentric: function(){ // returns numeric value for each node, placing higher nodes in levels towards the centre
-			  return this.degree();
+			  return this.degree()*0.6;
 			},
 			levelWidth: function(nodes){ // the variation of concentric values in each level
-			  return nodes.maxDegree() / 4;
+			  return nodes.maxDegree() / 10;
 			}
 		},	  
 		ready: function(){
@@ -432,6 +432,8 @@ $('#cy').cytoscape(
 
 				cy.elements().addClass('faded');
 				neighborhood.removeClass('faded');
+				
+				console.log( 'position = x:' + node.position().x + ', y:' + node.position().y );
 			});
 			
 			cy.on('tap', function(e){
@@ -439,10 +441,12 @@ $('#cy').cytoscape(
 					cy.elements().removeClass('faded');
 				}
 			});
+			
+			//cy.$('#1').trigger('tap');
 		}
 	}
 );
-	
+
 
 
 }); // on dom ready
