@@ -436,7 +436,7 @@ $('#cy').cytoscape(
 				console.log( 'position = x:' + node.position().x + ', y:' + node.position().y );
 			});
 			
-			cy.on('mouseout', function(e){
+			cy.on('mousemove', function(e){
 				if( e.cyTarget === cy ){
 					cy.elements().removeClass('faded');
 				}
