@@ -426,7 +426,7 @@ $('#cy').cytoscape(
 			
 			cy.elements().unselectify();
 			
-			cy.on('elements', 'node', function(e){
+			cy.on('mouseover', 'node', function(e){
 				var node = e.cyTarget; 
 				var neighborhood = node.neighborhood().add(node);
 
@@ -436,7 +436,13 @@ $('#cy').cytoscape(
 				console.log( 'position = x:' + node.position().x + ', y:' + node.position().y );
 			});
 			
-			cy.on('tap', function(e){
+			cy.on('mouseout', function(e){
+				if( e.cyTarget === cy ){
+					cy.elements().removeClass('faded');
+				}
+			});
+			
+			cy.on('click', function(e){
 				if( e.cyTarget === cy ){
 					cy.elements().removeClass('faded');
 				}
