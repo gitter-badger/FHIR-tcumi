@@ -426,7 +426,7 @@ $('#cy').cytoscape(
 			
 			cy.elements().unselectify();
 			
-			cy.on('tap', 'node', function(e){
+			cy.on('elements', 'node', function(e){
 				var node = e.cyTarget; 
 				var neighborhood = node.neighborhood().add(node);
 
