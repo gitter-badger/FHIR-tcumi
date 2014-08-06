@@ -15,7 +15,7 @@
 		<param-value>jdbc</param-value>
 		<param-value>jpa</param-value> (in the case of plain JPA)
 		<param-value>spring-data-jpa</param-value> (in the case of Spring Data JPA)
-		<param-value>mongo</param-value>
+		<param-value>mongodb</param-value>
 		-->
     </context-param>
 
