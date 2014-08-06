@@ -1,8 +1,7 @@
-package edu.tcu.gaduo.springmvc.service.clinical_general;
+package edu.tcu.gaduo.springmvc.service;
 
 import java.util.List;
 
-import org.hl7.fhir.instance.model.element.resuorce.FamilyHistory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -10,41 +9,40 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import edu.tcu.gaduo.springmvc.repository.IRepository;
-import edu.tcu.gaduo.springmvc.service.IService;
 
 @Service
-public class FamilyHistoryServiceImpl implements IService<FamilyHistory> {
+public class GenericServiceImpl<T> implements IService<T> {
 
-	IRepository<FamilyHistory> repository;
+	IRepository<T> repository;
 
     @Autowired
-    public FamilyHistoryServiceImpl(IRepository<FamilyHistory> repository) {
+    public GenericServiceImpl(IRepository<T> repository) {
         this.repository = repository;
     }
 
 	@Override
-	public FamilyHistory save(FamilyHistory entity) {
+	public T save(T entity) {
 		repository.save(entity);		
-		return null;
+		return entity;
 	}
 
 	@Override
     @Transactional(readOnly = true)
-	public FamilyHistory findById(String primaryKey) {
-    	FamilyHistory familyHistory = repository.findById(primaryKey);
+	public T findById(String _id, Class<T> clazz) {
+    	T familyHistory = repository.findById(_id, clazz);
 		return familyHistory;
 	}
 
 	@Override
     @Transactional(readOnly = true)
-	public List<FamilyHistory> findAll() {
-		// TODO Auto-generated method stub
-		return null;
+	public List<T> findAll(Class<T> clazz) {
+		List<T> list = repository.findAll(clazz);
+		return list;
 	}
 
 	@Override
     @Transactional(readOnly = true)
-	public Page<FamilyHistory> findAll(Pageable pageable) {
+	public Page<T> findAll(Pageable pageable) {
 		// TODO Auto-generated method stub
 		return null;
 	}
@@ -57,7 +55,7 @@ public class FamilyHistoryServiceImpl implements IService<FamilyHistory> {
 	}
 
 	@Override
-	public void delete(FamilyHistory entity) {
+	public void delete(T entity) {
 		// TODO Auto-generated method stub
 		
 	}

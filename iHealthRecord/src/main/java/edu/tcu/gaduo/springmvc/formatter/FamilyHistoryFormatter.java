@@ -27,7 +27,7 @@ public class FamilyHistoryFormatter implements Formatter<FamilyHistory> {
 
 	@Override
 	public FamilyHistory parse(String text, Locale locale) throws ParseException {
-        Collection<FamilyHistory> list = this.service.findAll();
+        Collection<FamilyHistory> list = this.service.findAll(FamilyHistory.class);
         for (FamilyHistory l : list) {
             if (l.getNoteSimple().equals(text)) {
                 return l;

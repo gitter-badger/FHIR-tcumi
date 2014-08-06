@@ -33,6 +33,7 @@ package org.hl7.fhir.instance.model.element.resuorce;
 
 import java.util.*;
 
+import org.codehaus.jackson.map.annotate.JsonSerialize;
 import org.hl7.fhir.instance.model.Property;
 import org.hl7.fhir.instance.model.ResourceType;
 import org.hl7.fhir.instance.model.element.BackboneElement;
@@ -42,10 +43,14 @@ import org.hl7.fhir.instance.model.element.type.CodeableConcept;
 import org.hl7.fhir.instance.model.element.type.Identifier;
 import org.hl7.fhir.instance.model.element.type.ResourceReference;
 import org.hl7.fhir.instance.model.element.type.String_;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Significant health events and conditions for people related to the subject relevant in the context of care for the subject.
  */
+
+@Document
+@JsonSerialize(include=JsonSerialize.Inclusion.NON_EMPTY)
 public class FamilyHistory extends Resource {
 
     public static class FamilyHistoryRelationComponent extends BackboneElement {

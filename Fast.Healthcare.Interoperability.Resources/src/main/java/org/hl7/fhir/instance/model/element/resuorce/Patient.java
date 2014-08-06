@@ -51,10 +51,12 @@ import org.hl7.fhir.instance.model.element.type.HumanName;
 import org.hl7.fhir.instance.model.element.type.Identifier;
 import org.hl7.fhir.instance.model.element.type.ResourceReference;
 import org.hl7.fhir.instance.model.factory.EnumFactory;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * Demographics and other administrative information about a person or animal receiving care or other health-related services.
  */
+@Document
 @JsonSerialize(include=JsonSerialize.Inclusion.NON_EMPTY)
 public class Patient extends Resource {
 

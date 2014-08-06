@@ -1,0 +1,117 @@
+<div th:fragment="style">
+	<style type="text/css">
+	</style>
+</div>
+<div th:fragment="script">
+	<script th:inline="javascript">
+		/*<![CDATA[*/
+		$(function() {
+
+		});
+		/*]]>*/
+	</script>
+</div>
+
+<div class="container" th:fragment="content">
+
+    <form th:object="${patient}" 
+    	th:method="${isNew} ? post : put"
+        th:action="@{${#httpServletRequest.servletPath}}" 
+        class="form-horizontal" 
+        id="add-owner-form">
+        <input type="hidden" name="_format" value="json" />
+		
+		<div class="container">
+			<!-- Example row of columns -->
+			<div class="row">
+				<div class="col-md-4">
+					<div class="form-group" th:classappend="${#fields.hasErrors('*{identifier[0].system.value}')} ? error">
+						<label class="control-label">identifier</label>
+						<div class="controls">
+							<input type="text" th:field="*{identifier[0].system.value}" class="form-control" />
+							<span class="help-inline" th:errors="*{identifier[0].system.value}">[error]</span>
+						</div>
+					</div>
+					<div>
+					<!-- 
+					<img th:src="@{'data:image/jpeg;base64,' +  ${#objects.nullSafe(*{photo[0].data.stringValue},default)}}" class="img-rounded" />
+					 -->
+						<input type="file" th:field="*{photo[0].data}" class="form-control" />
+					</div>
+					<div class="form-group" th:classappend="${#fields.hasErrors('active.value')} ? error">
+						<label class="control-label">Active</label>
+						<div class="controls">
+							<input type="checkbox" th:field="*{active.value}" th:checked="*{active.value}" class="form-control" />
+							<span class="help-inline" th:errors="*{active.value}">[error]</span>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+				
+					<div class="form-group" th:classappend="${#fields.hasErrors('name[0].family[0].value')} ? error">
+						<label class="control-label">Family Name</label>
+						<div class="controls">
+							<input type="text" th:field="*{name[0].family[0].value}" class="form-control" />
+							<span class="help-inline" th:errors="*{name[0].family[0].value}">[error]</span>
+						</div>
+					</div>
+				
+					<div class="form-group" th:classappend="${#fields.hasErrors('name[0].given[0].value')} ? error">
+						<label class="control-label">Given Name</label>
+						<div class="controls">
+							<input type="text" th:field="*{name[0].given[0].value}" class="form-control" />
+							<span class="help-inline" th:errors="*{name[0].given[0].value}">[error]</span>
+						</div>
+					</div>
+				
+					<div class="form-group" th:classappend="${#fields.hasErrors('birthDate.value.year')} ? error">
+						<label class="control-label">BirthDate</label>
+						<div class="controls">
+							<input type="text" th:field="*{birthDate.value.year}" class="form-control" />
+							<span class="help-inline" th:errors="*{birthDate.value.year}">[error]</span>
+						</div>
+					</div>
+				
+					<div class="form-group" th:classappend="${#fields.hasErrors('gender.text.value')} ? error">
+						<label class="control-label">Gender</label>
+						<div class="controls">
+							<select th:field="*{gender.text.value}" class="form-control">
+								<option value="F">Female</option>
+								<option value="M">Male</option>
+							</select>
+							<span class="help-inline" th:errors="*{gender.text.value}">[error]</span>
+						</div>
+					</div>
+					
+					<div class="form-group" th:classappend="${#fields.hasErrors('telecom[0].valueSimple')} ? error">
+						<label class="control-label" th:text="*{telecom[0].system.value}"></label>
+						<div class="controls">
+							<input type="text" th:field="*{telecom[0].valueSimple}" class="form-control" />
+							<span class="help-inline" th:errors="*{telecom[0].valueSimple}">[error]</span>
+						</div>
+					</div>
+					<!-- 
+					
+					<div class="form-group" th:classappend="${#fields.hasErrors('telecom[1].valueSimple')} ? error">
+						<label class="control-label" th:label="*{telecom[1].system.value}">Mobile</label>
+						<div class="controls">
+							<input type="text" th:field="*{telecom[1].valueSimple}" class="form-control" />
+							<span class="help-inline" th:errors="*{telecom[1].valueSimple}">[error]</span>
+						</div>
+					</div>
+					
+					 -->
+					
+				</div>
+				<div class="col-md-4">
+					
+					<div class="form-actions">
+						<button th:if="${isNew}" type="submit" class="btn btn-info">Add Owner</button>
+						<button th:unless="${isNew}" type="submit" class="btn btn-info">Update Owner</button>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+   	</form>
+</div>

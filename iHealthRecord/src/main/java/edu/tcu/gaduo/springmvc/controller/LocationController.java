@@ -1,11 +1,14 @@
-package edu.tcu.gaduo.springmvc.controller.administrative_entities;
+package edu.tcu.gaduo.springmvc.controller;
 
 import java.math.BigDecimal;
+import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.hl7.fhir.instance.model.element.Narrative;
 import org.hl7.fhir.instance.model.element.Narrative.NarrativeStatus;
+import org.hl7.fhir.instance.model.element.resuorce.FamilyHistory;
 import org.hl7.fhir.instance.model.element.resuorce.Location;
+import org.hl7.fhir.instance.model.element.resuorce.Patient;
 import org.hl7.fhir.instance.model.element.resuorce.Location.LocationPositionComponent;
 import org.hl7.fhir.instance.model.element.resuorce.Location.LocationStatus;
 import org.hl7.fhir.instance.model.element.type.Address;
@@ -23,12 +26,20 @@ import org.hl7.fhir.instance.model.element.type.ResourceReference;
 import org.hl7.fhir.instance.model.element.type.String_;
 import org.hl7.fhir.instance.model.element.type.uri.Uri;
 import org.hl7.fhir.utilities.xhtml.XhtmlNode;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.support.SessionStatus;
+
+import edu.tcu.gaduo.springmvc.service.IService;
 
 
 /*
@@ -43,13 +54,34 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 @RequestMapping("/Location")
-public class LocationController {
+public class LocationController extends GenericController<Location> {
 	public static Logger logger = Logger.getLogger(LocationController.class);
+	private IService<Location> service;
 
+	@Autowired
+    public LocationController(IService<Location> service) {
+        this.service = service;
+        super.viewPath = super.viewPath + "/Location";
+        super.routePath = "/Location";
+    }
+	
+    @InitBinder
+    public void setAllowedFields(WebDataBinder dataBinder) {
+    }
+
+	@RequestMapping(value = {"",  "/", "/index/", "/index", "/Index/", "/Index"}, method = RequestMethod.GET)
+	public String index( @RequestParam(value = "_format", required = false) String _format, Model model) {        
+    	List<Location> location = service.findAll(Location.class);
+		System.out.println("patients " + location.size());
+    	if(location != null)
+    		model.addAttribute("patients", location);
+	    return super.viewPath + "/index";
+	}
+	
     @RequestMapping(value = "/{_id}/", method = RequestMethod.GET)
     @ResponseBody
+    @Override
 	public Location read(@PathVariable("_id") String _id, @RequestParam(value = "_format", required = false) String _format) {   
-    	
 		XhtmlNode div = new XhtmlNode();
     	div.setContent("<div>Burgers UMC, South Wing, second floor</div>");
     	Narrative text = new Narrative();
@@ -174,16 +206,54 @@ public class LocationController {
     	
 	    return location;
 	}
-    
-    @RequestMapping(value = "/_search/", method = RequestMethod.GET)
-    @ResponseBody
-	public Location search(
-			@RequestParam("_id") String _id,
-			@RequestParam("address") Address address,
-			@RequestParam("identifier") Identifier identifier,
-			@RequestParam(value = "_format", required = false) String _format) {   
-    	Location location = new Location();
-    	
-	    return location;
+
+
+
+
+	@Override
+	public Location vread(String _id, String _vid, String _format) {
+		// TODO Auto-generated method stub
+		return null;
 	}
+
+
+
+
+	@Override
+	public String update(String _id, Location resources, String _format,
+			Model model, BindingResult result, SessionStatus status) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public boolean delete(String _id, String _format, Model model,
+			BindingResult result, SessionStatus status) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+
+
+
+	@Override
+	public String create(Location resources, String _format, Model model,
+			BindingResult result, SessionStatus status) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+
+
+	@Override
+	public Location validate(String _id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+    
+
 }

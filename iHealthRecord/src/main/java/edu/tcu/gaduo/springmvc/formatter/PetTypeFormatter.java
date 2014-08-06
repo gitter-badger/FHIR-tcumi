@@ -24,7 +24,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.Formatter;
 
 import edu.tcu.gaduo.springmvc.model.Owner;
-import edu.tcu.gaduo.springmvc.service.ClinicService;
+//import edu.tcu.gaduo.springmvc.service.ClinicService;
 
 /**
  * Instructs Spring MVC on how to parse and print elements of type 'PetType'. Starting from Spring 3.0, Formatters have
@@ -40,28 +40,40 @@ import edu.tcu.gaduo.springmvc.service.ClinicService;
  */
 public class PetTypeFormatter implements Formatter<Owner> {
 
-    private final ClinicService clinicService;
+	@Override
+	public String print(Owner object, Locale locale) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Owner parse(String text, Locale locale) throws ParseException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+//    private final ClinicService clinicService;
 
 
-    @Autowired
-    public PetTypeFormatter(ClinicService clinicService) {
-        this.clinicService = clinicService;
-    }
+//    @Autowired
+//    public PetTypeFormatter(ClinicService clinicService) {
+//        this.clinicService = clinicService;
+//    }
 
-    @Override
-    public String print(Owner owner, Locale locale) {
-        return owner.getFirstName();
-    }
+//    @Override
+//    public String print(Owner owner, Locale locale) {
+//        return owner.getFirstName();
+//    }
 
-    @Override
-    public Owner parse(String text, Locale locale) throws ParseException {
-        Collection<Owner> findOwners = this.clinicService.findOwnerByLastName(text);
-        for (Owner type : findOwners) {
-            if (type.getFirstName().equals(text)) {
-                return type;
-            }
-        }
-        throw new ParseException("type not found: " + text, 0);
-    }
+//    @Override
+//    public Owner parse(String text, Locale locale) throws ParseException {
+//        Collection<Owner> findOwners = this.clinicService.findOwnerByLastName(text);
+//        for (Owner type : findOwners) {
+//            if (type.getFirstName().equals(text)) {
+//                return type;
+//            }
+//        }
+//        throw new ParseException("type not found: " + text, 0);
+//    }
 
 }

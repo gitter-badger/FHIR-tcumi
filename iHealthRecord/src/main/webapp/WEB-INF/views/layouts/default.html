@@ -1,49 +1,139 @@
 <!DOCTYPE HTML>
 <html lang="zh-tw">
-	<head>
-   		<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
-		<meta name="description" content=""/>
-		<meta name="author" content=""/>
-		<link th:href="@{/resources/images/favicon.ico}" rel="shortcut icon" ></link>
-		<title>iHealthRecord</title>
-		<link th:href="@{/resources/css/bootstrap/bootstrap.min.css}" rel="stylesheet" ></link>
-		<link th:href="@{/resources/css/core.css}" rel="stylesheet" ></link>
-		<link th:href="@{/resources/css/kendo/kendo.common.min.css}" rel="stylesheet" ></link>
-		<link th:href="@{/resources/css/kendo/kendo.default.min.css}" rel="stylesheet" ></link>
-		
-	    <!-- Just for debugging purposes. Don't actually copy this line! -->
-	    <!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
-	
-	    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-	    <!--[if lt IE 9]>
-	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-	    <![endif]-->
-	    <style type="text/css">
-	    </style>
-		<div th:replace="${view} :: style"></div>
-		
-	</head>
-	<body>
-		<div class="site-wrapper">
-			<div class="site-wrapper-inner">
-				<div class="cover-container">
-					<div class="masthead clearfix" th:replace="fragments/header :: header"></div>
-					<div class="inner cover" th:replace="${view} :: content"></div>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="" />
+<meta name="author" content="" />
+<link th:href="@{/resources/images/favicon.ico}" rel="shortcut icon"></link>
+<title>iHealthRecord</title>
+<link th:href="@{/resources/css/bootstrap/bootstrap.min.css}" rel="stylesheet"></link>
+<link th:href="@{/resources/css/core.css}" rel="stylesheet"></link>
+<link th:href="@{/resources/css/kendo/kendo.common.min.css}" rel="stylesheet"></link>
+<link th:href="@{/resources/css/kendo/kendo.default.min.css}" rel="stylesheet"></link>
+<link th:href="@{/resources/css/dashboard.css}" rel="stylesheet" />
+
+<!-- Just for debugging purposes. Don't actually copy this line! -->
+<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<div th:replace="${view} :: style"></div>
+
+</head>
+<body>
+	<div class="site-wrapper">
+		<div class="site-wrapper-inner">
+			<div class="cover-container">
+				<div class="masthead clearfix" th:replace="fragments/header :: header"></div>
+				<div class="container-fluid">
+					<div class="row">
+						<div class="col-sm-3 col-md-2 sidebar">
+							<ul class="nav nav-sidebar">
+								<li class="active"><a href="#">Overview</a></li>
+								<li><a href="#">Reports</a></li>
+								<li><a href="#">Analytics</a></li>
+								<li><a href="#">Export</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/AdverseReaction/}">AdverseReaction</a></li>
+								<li><a th:href="@{/AllergyIntolerance/}">AllergyIntolerance</a></li>
+								<li><a th:href="@{/CarePlan/}">CarePlan</a></li>
+								<li><a th:href="@{/Condition/}">Condition</a></li>
+								<li><a th:href="@{/FamilyHistory/}">FamilyHistory</a></li>
+								<li><a th:href="@{/Procedure/}">Procedure</a></li>
+								<li><a th:href="@{/Questionnaire/}">Questionnaire</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Medication/}">Medication</a></li>
+								<li><a th:href="@{/MedicationPrescription/}">MedicationPrescription</a></li>
+								<li><a th:href="@{/MedicationAdministration/}">MedicationAdministration</a></li>
+								<li><a th:href="@{/MedicationDispense/}">MedicationDispense</a></li>
+								<li><a th:href="@{/MedicationStatement/}">MedicationStatement</a></li>
+								<li><a th:href="@{/Immunization/}">Immunization</a></li>
+								<li><a th:href="@{/ImmunizationRecommendation/}">ImmunizationRecommendation</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Observation/}">Observation</a></li>
+								<li><a th:href="@{/DiagnosticReport/}">DiagnosticReport</a></li>
+								<li><a th:href="@{/DiagnosticOrder/}">DiagnosticOrder</a></li>
+								<li><a th:href="@{/ImagingStudy/}">ImagingStudy</a></li>
+								<li><a th:href="@{/Specimen/}">Specimen</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/DeviceObservationReport/}">DeviceObservationReport</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Patient/}">Patient</a></li>
+								<li><a th:href="@{/RelatedPerson/}">RelatedPerson</a></li>
+								<li><a th:href="@{/Practitioner/}">Practitioner</a></li>
+								<li><a th:href="@{/Organization/}">Organization</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Device/}">Device</a></li>
+								<li><a th:href="@{/Location/}">Location</a></li>
+								<li><a th:href="@{/Substance/}">Substance</a></li>
+								<li><a th:href="@{/Group/}">Group</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Encounter/}">Encounter</a></li>
+								<li><a th:href="@{/Alert/}">Alert</a></li>
+								<li><a th:href="@{/Supply/}">Supply</a></li>
+								<li><a th:href="@{/Order/}">Order</a></li>
+								<li><a th:href="@{/OrderResponse/}">OrderResponse</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/List/}">List</a></li>
+								<li><a th:href="@{/Media/}">Media</a></li>
+								<li><a th:href="@{/Other/}">Other</a></li>
+								<li><a th:href="@{/Provenance/}">Provenance</a></li>
+								<li><a th:href="@{/SecurityEvent/}">SecurityEvent</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Composition/}">Composition</a></li>
+								<li><a th:href="@{/DocumentReference/}">DocumentReference</a></li>
+								<li><a th:href="@{/DocumentManifest/}">DocumentManifest</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/MessageHeader/}">MessageHeader</a></li>
+								<li><a th:href="@{/OperationOutcome/}">OperationOutcome</a></li>
+								<li><a th:href="@{/Query/}">Query</a></li>
+							</ul>
+							<ul class="nav nav-sidebar">
+								<li><a th:href="@{/Conformance/}">Conformance</a></li>
+								<li><a th:href="@{/ValueSet/}">ValueSet</a></li>
+								<li><a th:href="@{/Profile/}">Profile</a></li>
+								<li><a th:href="@{/ConceptMap/}">ConceptMap</a></li>
+							</ul>
+						</div>
+						<div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
+							<div class="inner cover" th:replace="${view} :: content"></div>
+						</div>
+					</div>
 					<div class="mastfoot" th:replace="fragments/footer :: footer"></div>
 				</div>
 			</div>
 		</div>
-	
+
 		<!-- Bootstrap core JavaScript
-	    ================================================== -->
+    ================================================== -->
 		<!-- Placed at the end of the document so the pages load faster -->
 		<script th:src="@{/webjars/jquery/1.9.0/jquery.js}"></script>
 		<script th:src="@{/resources/js/bootstrap/bootstrap.min.js}"></script>
 		<script th:src="@{/resources/js/kendo/kendo.all.min.js}"></script>
+
+		<script th:src="@{/resources/js/ie-emulation-modes-warning.js}"></script>
 		
+		<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+		<script th:src="@{/resources/js/ie10-viewport-bug-workaround.js}"></script>
+		
+		<script th:src="@{/resources/js/docs.min.js}"></script>
 		<div th:replace="${view} :: script"></div>
-	</body>
+	</div>
+</body>
 </html>

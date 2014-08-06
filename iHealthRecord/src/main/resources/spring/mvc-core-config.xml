@@ -20,8 +20,18 @@
         - POJOs labeled with the @Controller and @Service annotations are auto-detected.
     -->
     <context:component-scan base-package="edu.tcu.gaduo.springmvc.controller"/>
+    <context:component-scan base-package="edu.tcu.gaduo.springmvc.service"/>
 
     <mvc:annotation-driven conversion-service="conversionService"/>
+    
+    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
+        <property name="formatters">
+            <set>
+				<!-- <bean class="edu.tcu.gaduo.springmvc.formatter.FamilyHistoryFormatter"/> -->    
+				<!-- <bean class="edu.tcu.gaduo.springmvc.formatter.PetTypeFormatter"/>   -->
+			</set>
+        </property>
+    </bean>
 
     <!--  all resources inside folder src/main/webapp/resources are mapped so they can be refered to inside JSP files
         (see header.jsp for more details) -->
@@ -30,18 +40,7 @@
     <!-- uses WebJars so Javascript and CSS libs can be declared as Maven dependencies (Bootstrap, jQuery...) -->
     <mvc:resources mapping="/webjars/**" location="classpath:/META-INF/resources/webjars/"/>
 
-    <!-- 
     <mvc:view-controller path="/" view-name="welcome" />
-     -->
-
-    <bean id="conversionService" class="org.springframework.format.support.FormattingConversionServiceFactoryBean">
-        <property name="formatters">
-            <set>
-				<!-- <bean class="edu.tcu.gaduo.springmvc.formatter.FamilyHistoryFormatter"/> -->    
-				<bean class="edu.tcu.gaduo.springmvc.formatter.PetTypeFormatter"/>  
-			</set>
-        </property>
-    </bean>
 
     <!--
         - Message source for this context, loaded from localized "messages_xx" files.
@@ -90,6 +89,5 @@
 	<mvc:interceptors>
 	    <bean class="edu.tcu.gaduo.springmvc.layouts.ThymeleafLayoutInterceptor" />
 	</mvc:interceptors>
-
 
 </beans>
