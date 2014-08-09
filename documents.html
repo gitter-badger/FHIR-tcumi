@@ -1,13 +1,13 @@
 ﻿<!DOCTYPE HTML>
-  <!-- Outstanding issues:
-- relationships 
-- representation --><html>
+<html lang="zh-Hant-TW"><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-  <title>FHIR Documents - FHIR v0.0.81</title>
+  <title>慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81</title>
 
   
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="http://hl7.org/fhir" name="author"/>
+  <meta content="慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81"  name="description" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
   <link rel="stylesheet" href="fhir.css"/>
 
@@ -32,14 +32,17 @@
   <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
-
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+  
+  <!-- InstanceEndEditable -->
 </head>
 <body>
+	
 	<div id="segment-header" class="segment">  <!-- segment-header -->	
 		<div class="container">  <!-- container -->
 			<a id="logo" href="http://hl7.org/fhir"><img alt="logo fhir" src="./assets/images/fhir-logo-www.png"/> </a>
 			<div id="hl7-status">
-				<b>DSTU Release 1.1</b>
+				<b>DSTU Release 1.1-慈濟大學-醫學資訊學系</b>
 			</div>       	
 			
 			<div id="hl7-nav">
@@ -69,14 +72,13 @@
 					<a class="navbar-brand hidden" href="index.html">FHIR</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
 						<ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="documentation.html">Documentation</a></li>
-              <li><a href="implementation.html">Implementation</a></li>
-              <li><a href="resourcelist.html">Resources</a></li>
-              <li><a href="clinical.html">Clinical</a></li>
-              <li><a href="administration.html">Administrative</a></li>
-              <li><a href="infrastructure.html">Infrastructure</a></li>
-
+                          <li><a href="index.html">Home-首頁</a></li>
+                          <li><a href="documentation.html">Documentation-文件</a></li>
+                          <li><a href="implementation.html">Implementation-實作</a></li>
+                          <li><a href="resourcelist.html">Resources-資源</a></li>
+                          <li><a href="clinical.html">Clinical-臨床</a></li>
+                          <li><a href="administration.html">Administrative-行政管理</a></li>
+                          <li><a href="infrastructure.html">Infrastructure-基礎建設</a></li>
 						</ul>
 					</div>  <!-- /.nav-collapse -->
 				</div>  <!-- /.container -->
@@ -91,22 +93,23 @@
 	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
 		<div class="container">  <!-- container -->	
 			<ul class="breadcrumb">
+				<!-- InstanceBeginEditable name="breadcrumb" -->
         <li><a href="index.html">Home</a></li>
-        <li><a href="implementation.html">Implementation</a></li>        <li><b>Documents</b></li>          <!-- documents.html / page -->
-
+        <li><a href="implementation.html">Implementation</a></li>        <li><b>Documents</b></li>          <!-- documents.html / page -->          
+                <!-- InstanceEndEditable -->  
 			</ul>	
 		</div>  <!-- /container -->
 	</div>  <!-- /segment-breadcrumb -->
 	
 
 	<div id="segment-content" class="segment">  <!-- segment-content -->
-	<div class="container">  <!-- container -->
+		<div class="container">  <!-- container -->
             <div class="row">
             	<div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
+  					<!-- CONTENT CONTENT -->
 
-
-<div class="col-9">
+					<div class="col-9">
+						<!-- InstanceBeginEditable name="inner-wrapper" -->
 
 <h1><span class="sectioncount">2.4<a name="2.4"> </a></span> FHIR Documents</h1>
 
@@ -115,8 +118,9 @@ FHIR resources can be used to build documents that represent a composition:
 a set of coherent information that is a statement of healthcare information, 
 particularly including clinical observations and services. 
 
+
 A document is an immutable set of resources with a fixed presentation 
-that is authored and/or attested by humans, organizations and devices. 
+that is authored and/or attested by humans, organizations and devices.
 
 Documents built in this fashion may be exchanged between systems and also 
 persisted in document storage and management systems, including systems such as IHE 
@@ -129,13 +133,21 @@ FHIR documents may be 'clinical' (focused on patient healthcare information) but
 may also serve non-clinical purposes (e.g. practice guidelines, patient handouts, etc.)
 HL7 will develop profiles in the future giving additional guidance on appropriate 
 representation of clinical documents in general as well as specific types of clinical 
-documents (e.g. Consolidated CDA).
+documents (e.g. Consolidated CDA).<br>
+
+ - FHIR 資源可以被用於建立成文件，代表一個結構：一個連貫資訊的集合，是健康照護資訊的陳述，特別是包含臨床觀察和服務。<br>
+ 文件是一個加上固定代表資源的不變集合，是由人類、組織、裝置，創作地與或當作證據地。<br>
+ 文件被建立在系統間的交換，也在文件倉庫和管理系統中存放，包含像是 IHE XDS 的系統。<br>
+ 應用程式聲明符合這個框架算得上符合 "FHIR 文件"。   <br>
+ FHIR 文件可能是 '臨床'(著重於病人健康照護的資訊)，但也可以是服務非臨床目的(例如，實務指導守則、病人須知)。 HL7 將開發規範書在未來，在一般臨床文件和特殊型態的臨床文件(例，綜合 CDA )給予額外的指引。
 </p>
 
 <p>
 Note that FHIR defines both this document format and also a <a href="documentreference.html">document reference resource</a>. 
 FHIR documents are for documents that are authored and assembled in FHIR, while the document reference resource is for 
-general references to other documents. 
+general references to other documents. <br>
+
+ - 注意，FHIR 定義這文件的格式和文件參考資源。 FHIR 文件是對於文件在 FHIR 的著作和組合，而文件參考資源是為了參考到其他文件。
 </p>
 
 <h2><span class="sectioncount">2.4.1<a name="2.4.1"> </a></span> Document Content</h2>
@@ -149,15 +161,20 @@ resource that provides guidance on how they fit together. The bundle gathers all
 of the document into a single XML document which may be signed and managed as required. The 
 resources include both human readable and computer processable portions. In addition, the bundle 
 may include <a href="http://www.w3.org/Style/CSS/Overview.en.html">CSS stylesheets</a> 
-<a href="provenance.html">provenance</a> statements, and a signature.
+<a href="provenance.html">provenance</a> statements, and a signature. <br>
+- 所有文件有相同的結構︰一個被標籤-"http://hl7.org/fhir/tag/document" 確定的資源包裹，有一個作為第一個在包裹內的資源- <strong><em>Composition</em></strong> ，被一系列其他資源跟隨著，提供指導讓他們如何結合在一起。
+包裹蒐集在單一 XML 文件(可能是被簽署的文件或是被管理的文件需求) 的所有內容。 
+資源包含人類可讀和計算機可處理的部份。此外，包裹可以包含 CSS 樣式表語法、簽章。
+
 </p>
 <p>
-The composition resource is the foundation of the clinical document. It:
+The composition resource is the foundation of the clinical document. It:<br>
+- 資源 - <strong><em>Composition</em></strong> 是臨床文件的基礎。它
 </p>
 <ul>
- <li>provides identity and its purpose, sets the context of the document</li>
- <li>carries key information such as the subject and author, and who attests to the document</li>
- <li>divides the document up into a series of sections that contain other resources identified in this specification that carry the content</li>
+ <li>provides identity and its purpose, sets the context of the document<br> - 提供識別和設置文件的背景</li>
+ <li>carries key information such as the subject and author, and who attests to the document<br> - 攜帶關鍵資訊像是主體和作者，以及文件的證明人。</li>
+ <li>divides the document up into a series of sections that contain other resources identified in this specification that carry the content<br> - 將文件分割成一系列的章節，包含在這說明說中確定的其他資源。 </li>
 </ul> 
 <p>
 Any resource referenced directly in the Composition SHALL be included in the bundle when the document 
@@ -165,32 +182,35 @@ is assembled. Other resources that these referenced resources refer to may also 
 bundle if the document construction system chooses to so do. Including these additional resources will
 make the document bigger, but will save applications from needing to retrieve the linked resources
 if they need them while processing the document. Thus, whether these linked resources should be included or 
-not depends on the implementation environment.
+not depends on the implementation environment. <br>
+ - 當文件被組裝時，任何資源被直接的引用在資源 - <strong><em>Composition</em></strong> 應該包含在包裹中。 如果文件建構系統選擇這樣作，這些被引用的其他資源也參考被包含在包裹之中。 包含這些額外的資源將使文件變大，但也將節省應用程式，檢索需要鏈結的資源。 因此，無論這些被鏈結的資源應該被包含在或不依賴在實作環境之上。
 </p>
 <p>
-The document bundle SHALL NOT include any resources not on this list:
+The document bundle SHALL NOT include any resources not on this list:<br>
+- 文件包裹不應該包含任何不在以下清單的資源︰
 </p>
 <ol>
- <li>The Composition resource, and any resources directly or indirectly (i.e. recursively) referenced from it</li>
- <li>A Binary resource containing a stylesheet (as described below)</li>
- <li>Provenance Resources that have a target which is a resource included in item #1</li>
+ <li>The Composition resource, and any resources directly or indirectly (i.e. recursively) referenced from it<br> - 資源 - <strong><em>Composition</em></strong> 被它引用的任何直接地資源或是間接地資源(例，遞迴地)。</li>
+ <li>A Binary resource containing a stylesheet (as described below)<br> - 一個二元檔資源 - <strong><em>Binary</em></strong> ： 包含一個樣式表。</li>
+ <li>Provenance Resources that have a target which is a resource included in item #1 <br> - 資源 - <strong><em>Provenance</em></strong> ： 有一個包含在項目 1 的資源目的。</li>
 </ol>
 <p>
-There are two key identifiers on the document:
+There are two key identifiers on the document:<br>
+ - 有兩個關鍵識別碼在文件上：
 </p>
 <ul>
- <li>The document identifier (mandatory). This is found in <i>feed.id</i> and is unique for this instance of the document, and is never re-used</li>
- <li>The Composition identifier (optional). This is found in <i>Composition.identifier</i>, and is the same for all documents that are derived from this composition</li> 
+ <li>The document identifier (mandatory). This is found in <i>feed.id</i> and is unique for this instance of the document, and is never re-used<br> - 文件識別碼(強制性)。這是可從 <strong><em>feed.id</em></strong> 找到，是對於文件的實體唯一，是從不重新使用。</li>
+ <li>The Composition identifier (optional). This is found in <i>Composition.identifier</i>, and is the same for all documents that are derived from this composition<br> - 資源 - <strong><em>Composition</em></strong> 識別碼(可選擇)。這是可從 <strong><em>Composition.identifier</em></strong> 找到， 是對於所有文件相同，是</li> 
 </ul>
 
 <p>
 The document has several dates in it:
 </p>
 <ul>
- <li>The document date (mandatory). This is found in <i>feed.updated</i> and identifies when the document bundle was assembled from the underlying resources</li>
- <li>The Composition date (mandatory). This is found in <i>Composition.instant</i>, which is when the author wrote the document logically</li> 
- <li>The Attestation dates (optional). This is found in <i>Composition.attester.time</i> and is when the document was witnessed by the attesters. This would usually be at the same time as the composition date or afterwards</li> 
- <li>The Composition last modified time (mandatory per Atom). This is found in <i>entry.updated</i> for the composition, and is the last date of change of the composition. This must be &gt;= the composition date</li> 
+ <li>The document date (mandatory). This is found in <i>feed.updated</i> and identifies when the document bundle was assembled from the underlying resources<br> - 文件日期(強制性)。這可於 <strong><em>feed.update</em>找</strong> 找到和 ... (未完成)</li>
+ <li>The Composition date (mandatory). This is found in <i>Composition.instant</i>, which is when the author wrote the document logically<br> - <strong><em>Composition</em></strong> 日期(強制性)。</li> 
+ <li>The Attestation dates (optional). This is found in <i>Composition.attester.time</i> and is when the document was witnessed by the attesters. This would usually be at the same time as the composition date or afterwards<br> - <strong><em>Attestation</em></strong> 日期(可選擇)</li> 
+ <li>The Composition last modified time (mandatory per Atom). This is found in <i>entry.updated</i> for the composition, and is the last date of change of the composition. This must be &gt;= the composition date<br> - <strong><em>Composition</em></strong> 最後修改時間 </li> 
 </ul>
 <p>
 Document Bundles may be signed using digital signatures following the rules laid out in 
@@ -293,7 +313,7 @@ of this.
 </p>
 
 
-<h2><span class="sectioncount">2.4.3<a name="2.4.3"> </a></span> Document Handling Obligations</h2>
+<h2><span class="sectioncount">2.4.3<a name="2.4.3"> </a></span> Document Handling Obligations - 文件處理義務</h2>
 <p>
 The authors/constructors and processors of Clinical Documents, whether human or software, have 
 obligations that they must satisfy. 
@@ -449,9 +469,9 @@ a <a href="http.html#mime-type">_format parameter</a>. Other parameters may be s
   <tr> <td>pword</td> <td>Password if certificate requires one and the server doesn't know it by some other means. Putting the password in the URL has obvious security implications to consider. An alternative is for the client to sign the document</td> </tr>
 </table>
 
-
-</div>
-
+  
+                        <!-- InstanceEndEditable --> 
+					</div>
 
 				</div>  <!-- /inner-wrapper -->
             </div>  <!-- /row -->
@@ -467,7 +487,7 @@ a <a href="http.html#mime-type">_format parameter</a>. Other parameters may be s
         &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.0.81.2382) generated on Fri, May 9, 2014 11:16+1000.   <!-- <a href="qa.html">QA Report</a> -->   <!-- achive note -->
         <br/>
         <span style="color: #FFFF77">
-        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History</a> | <a href="license.html">License</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History 版本記錄</a> | <a href="license.html">License 許可證</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         </span>
         </p>
 			</div>  <!-- /inner-wrapper -->
@@ -491,6 +511,19 @@ a <a href="http.html#mime-type">_format parameter</a>. Other parameters may be s
 <script src="./assets/js/respond.min.js"> </script>
 
 <script src="./assets/js/fhir.js"> </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53229861-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- InstanceBeginEditable name="EditRegion4" -->
+
+<!-- InstanceEndEditable -->
 
   <!-- Analytics Below
 ================================================== -->
@@ -498,4 +531,5 @@ a <a href="http.html#mime-type">_format parameter</a>. Other parameters may be s
     
     
 </body>
-</html>
+<!-- InstanceEnd --></html>     
+          

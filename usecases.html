@@ -1,11 +1,13 @@
 ﻿<!DOCTYPE HTML>
-<html>
+<html lang="zh-Hant-TW"><!-- InstanceBegin template="/Templates/general.dwt" codeOutsideHTMLIsLocked="false" -->
 <head>
-  <title>Common Scenarios - FHIR v0.0.81</title>
+  <title>慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81</title>
 
   
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <meta content="http://hl7.org/fhir" name="author"/>
+  <meta content="慈濟大學-醫學資訊學系，FHIR Specification Home Page - FHIR v0.0.81"  name="description" />
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
 
   <link rel="stylesheet" href="fhir.css"/>
 
@@ -30,14 +32,17 @@
   <link sizes="72x72" rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-72-precomposed.png"/>
   <link rel="apple-touch-icon-precomposed" href="./assets/ico/apple-touch-icon-57-precomposed.png"/>
   <link rel="shortcut icon" href="./assets/ico/favicon.png"/>
-
+  <!-- InstanceBeginEditable name="EditRegion3" -->
+  
+  <!-- InstanceEndEditable -->
 </head>
 <body>
+	
 	<div id="segment-header" class="segment">  <!-- segment-header -->	
 		<div class="container">  <!-- container -->
 			<a id="logo" href="http://hl7.org/fhir"><img alt="logo fhir" src="./assets/images/fhir-logo-www.png"/> </a>
 			<div id="hl7-status">
-				<b>DSTU Release 1.1</b>
+				<b>DSTU Release 1.1-慈濟大學-醫學資訊學系</b>
 			</div>       	
 			
 			<div id="hl7-nav">
@@ -67,14 +72,13 @@
 					<a class="navbar-brand hidden" href="index.html">FHIR</a>
 					<div class="nav-collapse collapse navbar-inverse-collapse">
 						<ul class="nav navbar-nav">
-              <li><a href="index.html">Home</a></li>
-              <li><a href="documentation.html">Documentation</a></li>
-              <li><a href="implementation.html">Implementation</a></li>
-              <li><a href="resourcelist.html">Resources</a></li>
-              <li><a href="clinical.html">Clinical</a></li>
-              <li><a href="administration.html">Administrative</a></li>
-              <li><a href="infrastructure.html">Infrastructure</a></li>
-
+                          <li><a href="index.html">Home-首頁</a></li>
+                          <li><a href="documentation.html">Documentation-文件</a></li>
+                          <li><a href="implementation.html">Implementation-實作</a></li>
+                          <li><a href="resourcelist.html">Resources-資源</a></li>
+                          <li><a href="clinical.html">Clinical-臨床</a></li>
+                          <li><a href="administration.html">Administrative-行政管理</a></li>
+                          <li><a href="infrastructure.html">Infrastructure-基礎建設</a></li>
 						</ul>
 					</div>  <!-- /.nav-collapse -->
 				</div>  <!-- /.container -->
@@ -89,185 +93,285 @@
 	<div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
 		<div class="container">  <!-- container -->	
 			<ul class="breadcrumb">
+				<!-- InstanceBeginEditable name="breadcrumb" -->
         <li><a href="index.html">Home</a></li>
-        <li><a href="implementation.html">Implementation</a></li>        <li><b>Common Usages</b></li>          <!-- usecases.html / page -->
-
+        <li><a href="implementation.html">Implementation</a></li>        <li><b>Common Usages</b></li>          <!-- usecases.html / page -->      
+                <!-- InstanceEndEditable -->  
 			</ul>	
 		</div>  <!-- /container -->
 	</div>  <!-- /segment-breadcrumb -->
 	
 
 	<div id="segment-content" class="segment">  <!-- segment-content -->
-	<div class="container">  <!-- container -->
+		<div class="container">  <!-- container -->
             <div class="row">
             	<div class="inner-wrapper">
-  <!-- CONTENT CONTENT -->
+  					<!-- CONTENT CONTENT -->
 
-
-<div class="col-9">
+					<div class="col-9">
+						<!-- InstanceBeginEditable name="inner-wrapper" -->
   
 <a name="root"> </a>
-<h1><span class="sectioncount">2.11<a name="2.11"> </a></span> Common Scenarios in FHIR</h1>
+<h1>
+	<span class="sectioncount">2.11<a name="2.11"> </a></span> Common Scenarios in FHIR - 在 FHIR 常見情境
+</h1>
 
-<p>
-FHIR is a framework standard that defines a common way to solve healthcare problems 
-and provides a set of resources that can be used in many different ways. 
-This page describes how certain common usage scenarios are implemented using the capabilities that 
-FHIR defines.  The provided scenarios are examples of usage and are not in any way exhaustive.  FHIR
-can and will be used in a wide variety of circumstances.
-</p>
+<p>FHIR is a framework standard that defines a common way to solve
+	healthcare problems and provides a set of resources that can be used in
+	many different ways. This page describes how certain common usage
+	scenarios are implemented using the capabilities that FHIR defines. The
+	provided scenarios are examples of usage and are not in any way
+	exhaustive. FHIR can and will be used in a wide variety of
+	circumstances.<br> 
+    - FHIR 是一個標準框架，定義常見的方法以解決健康照護問題和提供資源集可被用於不同的方式。本頁描述如何有能力實作FHIR 確定是常見情境用途。提供情境是用途範例 FHIR 可以被用於不同狀況。</p>
 
-<a name="phr"/>
-<h2><span class="sectioncount">2.11.1<a name="2.11.1"> </a></span> Personal Health Record (PHR)</h2>
-<p>
-In the PHR scenario, an Electronic Medical Record system (EMR, though many other names and acronyms 
-are also used) provides a RESTful API that allows patients to access their own medical
-record via a common web portal or mobile application, usually provided by a third party. 
-In this scenario, the PHR provider:
-</p> 
+<a name="phr" />
+<h2>
+	<span class="sectioncount">2.11.1<a name="2.11.1"> </a></span> Personal
+	Health Record (PHR)
+</h2>
+<p>In the PHR scenario, an Electronic Medical Record system (EMR,
+	though many other names and acronyms are also used) provides a RESTful
+	API that allows patients to access their own medical record via a
+	common web portal or mobile application, usually provided by a third
+	party. In this scenario, the PHR provider:</p>
 
 <ul>
- <li>Provides the patient with a login that identifies them (or links the patient record to an external identity provided by OpenID, Facebook, Google, etc.)</li>
- <li>Authenticates the client using an appropriate OAuth server for the login (possibly their own) and restricts the client to viewing records associated with the specific patient (or patients, where appropriate access has been arranged)</li>
+	<li>Provides the patient with a login that identifies them (or
+		links the patient record to an external identity provided by OpenID,
+		Facebook, Google, etc.)</li>
+	<li>Authenticates the client using an appropriate OAuth server for
+		the login (possibly their own) and restricts the client to viewing
+		records associated with the specific patient (or patients, where
+		appropriate access has been arranged)</li>
 </ul>
 
 <p>
-The EMR exposes a FHIR server that supports the <a href="http.html#search">search</a> and <a href="http.html#read">read</a> operations on the following resources: 
+	The EMR exposes a FHIR server that supports the <a
+		href="http.html#search">search</a> and <a href="http.html#read">read</a>
+	operations on the following resources:
 </p>
 <ol>
- <li>the <a href="patient.html">patient</a> resource in order to provide demographics to the client. When a client searches patients with no search criteria, they get a list of all patients they have access to</li>
- <li><a href="http.html#search">search</a> and <a href="http.html#read">read</a> on the <a href="documentreference.html">Document Reference</a> resource to provide access to general patient documents in the form of PDFs etc. (PDFs are preferred)</li>
- <li><a href="http.html#search">search</a> and <a href="http.html#read">read</a> on a set of <a href="clinical.html">clinical resources</a></li> 
+	<li>the <a href="patient.html">patient</a> resource in order to
+		provide demographics to the client. When a client searches patients
+		with no search criteria, they get a list of all patients they have
+		access to
+	</li>
+	<li><a href="http.html#search">search</a> and <a
+		href="http.html#read">read</a> on the <a href="documentreference.html">Document
+			Reference</a> resource to provide access to general patient documents in
+		the form of PDFs etc. (PDFs are preferred)</li>
+	<li><a href="http.html#search">search</a> and <a
+		href="http.html#read">read</a> on a set of <a href="clinical.html">clinical
+			resources</a></li>
 </ol>
 <p>
-Here is the conformance Statement for this scenario:
- <a href="conformance-phr-example.xml.html">XML</a> or 
- <a href="conformance-phr-example.json.html">JSON</a>.
+	Here is the conformance Statement for this scenario: <a
+		href="conformance-phr-example.xml.html">XML</a> or <a
+		href="conformance-phr-example.json.html">JSON</a>.
 </p>
 
 <p>
-The EMR may also choose to provide additional functionality, such as shared access to patient 
-records by relatives/carers, to allow the patient to upload their own documents, medication statements, observations
-(e.g. from patient monitoring devices) and/or to allow the patient to make appointments. This 
-additional functionality will involve additional API capabilities to be implemented and 
-exposed. The EMR server may also choose to expose the <a href="http.html#search">search</a>, <a href="http.html#read">read</a> and <a href="http.html#history">history</a> operation on 
-the Security Event resource for the patient-specific records to allow patient review of record access. Note that all 
-usage of the RESTful API should be logged in SecurityEvent resources.
+	The EMR may also choose to provide additional functionality, such as
+	shared access to patient records by relatives/carers, to allow the
+	patient to upload their own documents, medication statements,
+	observations (e.g. from patient monitoring devices) and/or to allow the
+	patient to make appointments. This additional functionality will
+	involve additional API capabilities to be implemented and exposed. The
+	EMR server may also choose to expose the <a href="http.html#search">search</a>,
+	<a href="http.html#read">read</a> and <a href="http.html#history">history</a>
+	operation on the Security Event resource for the patient-specific
+	records to allow patient review of record access. Note that all usage
+	of the RESTful API should be logged in SecurityEvent resources.
 </p>
 
-<a name="xds"/>
-<h2><span class="sectioncount">2.11.2<a name="2.11.2"> </a></span> Document Sharing (XDS)</h2>
+<a name="xds" />
+<h2>
+	<span class="sectioncount">2.11.2<a name="2.11.2"> </a></span> 
+    Document Sharing (XDS) - 文件共享
+</h2>
 
-<p>
-One common way to integrate healthcare information from a variety of sources is to build a 
-repository of documents around a patient record. Building a repository of documents 
-allows for less stringent alignment around policy, procedures and record-keeping/informatics
-standards.
-</p>
-<p>
-The most widely adopted framework for sharing documents within institutions, regions, states
-or countries is IHE Cross-Enterprise Document Sharing (XDS). XDS allows for a federated 
-system of repositories with a registry to provide coordinated access to the documents. 
-</p>
-<p>
-FHIR provides equivalent functionality to XDS that can be used to implement XDS behind
-the existing XDS.b interface, to provide a simpler mobile-friendly interface to an 
-existing XDS ecosystem, or to link document sharing into other functionality provided
-through a FHIR interface. 
-</p>
-<p>
-The following FHIR Resources are involved in the XDS functionality:
-</p>
+<p>One common way to integrate healthcare information from a variety
+	of sources is to build a repository of documents around a patient
+	record. Building a repository of documents allows for less stringent
+	alignment around policy, procedures and record-keeping/informatics
+	standards.<br> 
+    - 一個常見方式以整合來自不同來源的健康照護資訊。
+    是建立一個儲存病歷的儲存庫。建立一個文件儲存庫允許政策、程序、記錄保存/訊息標準以不太嚴格的方式對齊。</p>
+<p>The most widely adopted framework for sharing documents within
+	institutions, regions, states or countries is IHE Cross-Enterprise
+	Document Sharing (XDS). XDS allows for a federated system of
+	repositories with a registry to provide coordinated access to the
+	documents.<br>
+ 	- 在機構、區域、州、國家內，為了共享文件而廣泛採用此 IHE-XDS 框架。 XDS 允許分散式的儲存庫和一個註冊中心，以提供共同存取文件。</p>
+<p>FHIR provides equivalent functionality to XDS that can be used to
+	implement XDS behind the existing XDS.b interface, to provide a simpler
+	mobile-friendly interface to an existing XDS ecosystem, or to link
+	document sharing into other functionality provided through a FHIR
+	interface.<br>
+    - FHIR 提供相當於 XDS 的功能，可用於實作 XDS 在現有 XDS.b 介面之後，以提供對行動裝置友善的介面到現有 XDS 生態系統，或連接文件共享到 FHIR 介面提供其他功能。</p>
+<p>The following FHIR Resources are involved in the XDS	functionality:<br>
+ - 依據 FHIR 資源涉及的 XDS 功能：</p>
 <ul>
- <li>The <a href="documentreference.html">DocumentReference</a> resource describes a document that is located elsewhere. A document registry is a system that maintains a set of Document References</li>
- <li>The <a href="xds-profile.html">XDS profile</a> provides specific XDS implementation detail for the more general DocumentReference resource</li>
- <li>The <a href="http.html#binary">Binary</a> support can be used to store the actual documents on a FHIR server. A repository is a system that stores the binary document in addition to Document References (or sometimes without)</li>
- <li><a href="patient.html">Patient</a>, <a href="practitioner.html">Practitioner</a> and <a href="organization.html">Organization</a> resources provide support for identifying people and organizations</li>
- <li>The <a href="securityevent.html">SecurityEvent</a> resource tracks usage of the document registry and repository</li>
+	<li>The <a href="documentreference.html">DocumentReference</a> resource describes a document that is located elsewhere. A document registry is a system that maintains a set of Document References<br> - 資源 - <strong><em>文件參考</em></strong> ，描述位於其他位置的文件。 一個文件註冊中心是一個維護文件參考集。
+	</li>
+	<li>The <a href="xds-profile.html">XDS profile</a> provides specific XDS implementation detail for the more general DocumentReference resource <br> - XDS 規範書為更多一般資源-<strong><em>文件參考</em></strong>，提供特定 XDS 實作細節</li>
+	<li>The <a href="http.html#binary">Binary</a> support can be used to store the actual documents on a FHIR server. A repository is a system that stores the binary document in addition to Document References (or sometimes without) <br> - 資源 - <strong><em>二元擋</em></strong>，支持可被用於儲存實際文件在 FHIR 伺服器。 一個儲存庫是一個除了儲存 資源-<strong><em>文件參考</em></strong> 之外，也儲存二元文件的系統。
+
+	</li>
+	<li><a href="patient.html">Patient</a>, <a href="practitioner.html">Practitioner</a> and <a href="organization.html">Organization</a> resources provide support for identifying people and organizations <br>
+- 資源-<strong><em>病人</em></strong>、資源-<strong><em>醫療從業人員</em></strong>、資源-<strong><em>組織</em></strong>，提供支持識別病人和組織。</li>
+	<li>The <a href="securityevent.html">SecurityEvent</a> resource tracks usage of the document registry and repository <br> - 資源-<strong><em>安全事件</em></strong>，追蹤文件儲存庫和文件註冊中心的使用。 </li>
 </ul>
-<p>
-At present, IHE is working with the FHIR project team to use FHIR for Mobile Health Documents (MHD).
-</p>
+<p>At present, IHE is working with the FHIR project team to use FHIR for Mobile Health Documents (MHD).<br> - 目前， IHE 正與 FHIR 專案團隊合作，為行動裝置健康文件(MHD)而使用 FHIR 。</p>
 
 
-<a name="decision"/>
-<h2><span class="sectioncount">2.11.3<a name="2.11.3"> </a></span> Decision Support</h2>
+<a name="decision" />
+<h2>
+	<span class="sectioncount">2.11.3<a name="2.11.3"> </a></span> Decision
+	Support
+</h2>
 
-<p>
-One common use of healthcare information systems is to integrate some form of decision support software into clinical systems.
-Common uses of clinical decision support are:
-</p>
+<p>One common use of healthcare information systems is to integrate
+	some form of decision support software into clinical systems. Common
+	uses of clinical decision support are:</p>
 <ul>
- <li>Drug-drug interaction checking, and more generally, prescription safety checks</li>
- <li>Suggesting commonly missed Diagnostic Data interpretations (including delta checking)</li>
- <li>Patient surveillance for early warning of deteriorating patient health (both acute and ambulatory care)</li>
- <li>Identifying candidates for alternative treatment plans for improved efficacy</li>
+	<li>Drug-drug interaction checking, and more generally,
+		prescription safety checks</li>
+	<li>Suggesting commonly missed Diagnostic Data interpretations
+		(including delta checking)</li>
+	<li>Patient surveillance for early warning of deteriorating
+		patient health (both acute and ambulatory care)</li>
+	<li>Identifying candidates for alternative treatment plans for
+		improved efficacy</li>
 </ul>
-<p>
-Note that in addition to clinical decision support, there are also infrastructural uses, such as 
-managing access control.
-</p>
-<p>
-The various forms of decision support each involve different interaction patterns, so there is no single 
-decision support implementation in the FHIR specification. Generally, the patterns fall into several classes:
-</p>
+<p>Note that in addition to clinical decision support, there are
+	also infrastructural uses, such as managing access control.</p>
+<p>The various forms of decision support each involve different
+	interaction patterns, so there is no single decision support
+	implementation in the FHIR specification. Generally, the patterns fall
+	into several classes:</p>
 <ol>
- <li>The decision comes from an engine entirely hidden behind a system interface and has no direct impact on the data exchange</li>
- <li>The decision support engine uses existing data and generates alarm messages concerning patient state that are visible on the FHIR interface</li>
- <li>The decision support engine is consulted through a described interface; it accepts a request for a decision and returns a decision</li>
+	<li>The decision comes from an engine entirely hidden behind a
+		system interface and has no direct impact on the data exchange</li>
+	<li>The decision support engine uses existing data and generates
+		alarm messages concerning patient state that are visible on the FHIR
+		interface</li>
+	<li>The decision support engine is consulted through a described
+		interface; it accepts a request for a decision and returns a decision</li>
 </ol>
-<p>
-Any decision support may fall into multiple categories at once, depending on the perspective of a particular system.
-</p>
+<p>Any decision support may fall into multiple categories at once,
+	depending on the perspective of a particular system.</p>
 <ol>
- <li>There is no particular support required from the FHIR specification, though there will be ongoing review of the contents of the resources to ensure that they support common decision support practices appropriately</li>
- <li>There is no suitable resource for this use yet. The <a href="alert.html">Alert</a> resource is intended or clinical notes about the patient, and is not intended for this use. A resource called &quot;Alarm&quot; is under preparation for this purpose </li>
- <li>A request for a decision support is understood as a <a href="search.html">search</a> using a named _query that takes a set of parameters. See below</li>
+	<li>There is no particular support required from the FHIR
+		specification, though there will be ongoing review of the contents of
+		the resources to ensure that they support common decision support
+		practices appropriately</li>
+	<li>There is no suitable resource for this use yet. The <a
+		href="alert.html">Alert</a> resource is intended or clinical notes
+		about the patient, and is not intended for this use. A resource called
+		&quot;Alarm&quot; is under preparation for this purpose
+	</li>
+	<li>A request for a decision support is understood as a <a
+		href="search.html">search</a> using a named _query that takes a set of
+		parameters. See below
+	</li>
 </ol>
- 
-<h3><span class="sectioncount">2.11.3.1<a name="2.11.3.1"> </a></span> Explicit Requests for Decisions</h3> 
+
+<h3>
+	<span class="sectioncount">2.11.3.1<a name="2.11.3.1"> </a></span>
+	Explicit Requests for Decisions
+</h3>
+<p>When a query is initiated in order to get a decision made, the
+	following considerations apply:</p>
 <p>
-When a query is initiated in order to get a decision made, the following considerations apply:
+	<b>Request</b>
 </p>
-<p><b>Request</b></p>
 <ul>
-  <li>The request for a decision is made using one of the interaction patterns described for <a href="search.html">search/query</a>: A RESTful search, a query posted to <a href="messaging.html#mailbox">/Mailbox</a>, a query <a href="messaging.html">message</a>, or the Asynchronous query pattern</li>
-  <li>The request has a _query parameter that identifies the decision that is being requested</li>
-  <li>The request also has a set of parameter values. These parameter values may be the data that describes the decision being made or they may be references to specific resources that contain the request. In general, 
-    the more complex the decision request is, the more likely it is that a full resource is appropriate, particularly since this provides a ready made way to record and manage the requests themselves. </li>
-  <li>In some of the query interaction patterns, the resources identified in the parameter value can be bundled up with the request. In others, only the references can be passed</li>
-  <li>Which of the query patterns is most appropriate depends on the complexity of the decision support input, and the length of time the decision is expected to take. As either of these increases, the more complex query patterns become more appropriate</li>
+	<li>The request for a decision is made using one of the
+		interaction patterns described for <a href="search.html">search/query</a>:
+		A RESTful search, a query posted to <a href="messaging.html#mailbox">/Mailbox</a>,
+		a query <a href="messaging.html">message</a>, or the Asynchronous
+		query pattern
+	</li>
+	<li>The request has a _query parameter that identifies the
+		decision that is being requested</li>
+	<li>The request also has a set of parameter values. These
+		parameter values may be the data that describes the decision being
+		made or they may be references to specific resources that contain the
+		request. In general, the more complex the decision request is, the
+		more likely it is that a full resource is appropriate, particularly
+		since this provides a ready made way to record and manage the requests
+		themselves.</li>
+	<li>In some of the query interaction patterns, the resources
+		identified in the parameter value can be bundled up with the request.
+		In others, only the references can be passed</li>
+	<li>Which of the query patterns is most appropriate depends on the
+		complexity of the decision support input, and the length of time the
+		decision is expected to take. As either of these increases, the more
+		complex query patterns become more appropriate</li>
 </ul>
 
-<p><b>Response</b></p>
+<p>
+	<b>Response</b>
+</p>
 <ul>
- <li>If the decision support engine is unable to provide the requested decision, it returns an <a href="operationoutcome.html">Operation Outcome Resource</a> describing the issue</li>
- <li>Otherwise it returns a resource that represents the decision, along with other resources as supporting information, as described by the resource, or applicable profiles</li>
- <li>In principle, the decision provider can choose to make a copy of the returned decision resource available through a normal RESTful interface, or it can choose not to. This decision may be constrained by applicable profiles, policy decision, or the innate nature of the query</li>
- <li>If either the decision provider or the requester choose to retain a copy of the decision, they must ensure that the (lack of) currency of the decision is appropriately considered when it is used</li>
+	<li>If the decision support engine is unable to provide the
+		requested decision, it returns an <a href="operationoutcome.html">Operation
+			Outcome Resource</a> describing the issue
+	</li>
+	<li>Otherwise it returns a resource that represents the decision,
+		along with other resources as supporting information, as described by
+		the resource, or applicable profiles</li>
+	<li>In principle, the decision provider can choose to make a copy
+		of the returned decision resource available through a normal RESTful
+		interface, or it can choose not to. This decision may be constrained
+		by applicable profiles, policy decision, or the innate nature of the
+		query</li>
+	<li>If either the decision provider or the requester choose to
+		retain a copy of the decision, they must ensure that the (lack of)
+		currency of the decision is appropriately considered when it is used</li>
 </ul>
 
-<p>
-It follows from this then, that decisions that may be requested need at least a response resource defined, and possibly a request resource. This table summarizes 
-known decisions for which resources have been defined.
-</p>
+<p>It follows from this then, that decisions that may be requested
+	need at least a response resource defined, and possibly a request
+	resource. This table summarizes known decisions for which resources
+	have been defined.</p>
 <table class="grid">
- <tr> <td><b>Decision</b></td> <td><b>Resources</b></td> <td><b>Invocation</b></td> </tr>
- <tr> <td>What immunizations should this patient have?</td> <td>Response: <a href="immunizationrecommendation.html">ImmunizationRecommendation</a></td> <td>The exact way to invoke this decision is not yet defined</td> </tr>
+	<tr>
+		<td><b>Decision</b></td>
+		<td><b>Resources</b></td>
+		<td><b>Invocation</b></td>
+	</tr>
+	<tr>
+		<td>What immunizations should this patient have?</td>
+		<td>Response: <a href="immunizationrecommendation.html">ImmunizationRecommendation</a></td>
+		<td>The exact way to invoke this decision is not yet defined</td>
+	</tr>
 </table>
 
-<p>
-Implementers are allowed to use existing resources for decisions not documented here, but there is no guarantee that they will be suitable. 
-Improving decision support will be a focus for ongoing development during the Trial Use period.
-</p>
+<p>Implementers are allowed to use existing resources for decisions
+	not documented here, but there is no guarantee that they will be
+	suitable. Improving decision support will be a focus for ongoing
+	development during the Trial Use period.</p>
 
 </div>
-<div class="col-3"><div class="itoc">
-<p>On This Page:</p>
-<p class="link"><a href="#phr">PHR</a></p><p class="link"><a href="#xds">Document Sharing (XDS)</a></p><p class="link"><a href="#decision">Decision Support</a></p>
-</div></div>
-
-
+<div class="col-3">
+	<div class="itoc">
+		<p>On This Page:</p>
+		<p class="link">
+			<a href="#phr">PHR</a>
+		</p>
+		<p class="link">
+			<a href="#xds">Document Sharing (XDS)</a>
+		</p>
+		<p class="link">
+			<a href="#decision">Decision Support</a>
+		</p>
+	</div>
+</div>	
+                        <!-- InstanceEndEditable --> 
+					</div>
 
 				</div>  <!-- /inner-wrapper -->
             </div>  <!-- /row -->
@@ -283,7 +387,7 @@ Improving decision support will be a focus for ongoing development during the Tr
         &copy; HL7.org 2011 - 2014. FHIR DSTU (v0.0.81.2382) generated on Fri, May 9, 2014 11:16+1000.   <!-- <a href="qa.html">QA Report</a> -->   <!-- achive note -->
         <br/>
         <span style="color: #FFFF77">
-        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History</a> | <a href="license.html">License</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
+        Links: <a href="dstu.html">What's a DSTU?</a> | <a href="history.html">Version History 版本記錄</a> | <a href="license.html">License 許可證</a> | <a href="http://gforge.hl7.org/gf/project/fhir/tracker/?action=TrackerItemAdd&amp;tracker_id=677">Propose a change</a>
         </span>
         </p>
 			</div>  <!-- /inner-wrapper -->
@@ -307,6 +411,19 @@ Improving decision support will be a focus for ongoing development during the Tr
 <script src="./assets/js/respond.min.js"> </script>
 
 <script src="./assets/js/fhir.js"> </script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-53229861-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- InstanceBeginEditable name="EditRegion4" -->
+
+<!-- InstanceEndEditable -->
 
   <!-- Analytics Below
 ================================================== -->
@@ -314,4 +431,5 @@ Improving decision support will be a focus for ongoing development during the Tr
     
     
 </body>
-</html>
+<!-- InstanceEnd --></html>     
+          
