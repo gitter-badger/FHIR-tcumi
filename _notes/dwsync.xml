@@ -22,7 +22,7 @@
 <file name="fhir-v0.3.0.epub" server="203.64.84.42:2021" local="130522000295786830" remote="130522005600000000" Dst="0" />
 <file name="emf.txt" server="203.64.84.42:2021" local="130522000251094274" remote="130522005600000000" Dst="0" />
 <file name="profiles-resources.xml" server="203.64.84.42:2021" local="130522001376828662" remote="130522005600000000" Dst="0" />
-<file name="translations.xml" server="203.64.84.42:2021" local="130522030929408973" remote="130522030800000000" Dst="0" />
+<file name="translations.xml" server="203.64.84.42:2021" local="130522066297091889" remote="130522066200000000" Dst="0" />
 <file name="all-valuesets.zip" server="203.64.84.42:2021" local="130522000285956268" remote="130522005600000000" Dst="0" />
 <file name="examples-json.zip" server="203.64.84.42:2021" local="130522000351770032" remote="130522005600000000" Dst="0" />
 <file name="examples.zip" server="203.64.84.42:2021" local="130522000386101996" remote="130522005600000000" Dst="0" />
@@ -2006,7 +2006,7 @@
 <file name="resource-types.json" server="203.64.84.42:2021" local="130472198865225034" remote="130522008000000000" Dst="0" />
 <file name="resource-types.json.html" server="203.64.84.42:2021" local="130472198865545052" remote="130522008000000000" Dst="0" />
 <file name="resource-types.xml" server="203.64.84.42:2021" local="130472198865855070" remote="130522008000000000" Dst="0" />
-<file name="resourcelist.html" server="203.64.84.42:2021" local="130522029646205578" remote="130522029600000000" Dst="0" />
+<file name="resourcelist.html" server="203.64.84.42:2021" local="130522065852766475" remote="130522065600000000" Dst="0" />
 <file name="resource-types.xml.html" server="203.64.84.42:2021" local="130472198866165088" remote="130522008000000000" Dst="0" />
 <file name="resources.html" server="203.64.84.42:2021" local="130472198866795124" remote="130522008000000000" Dst="0" />
 <file name="response-code.html" server="203.64.84.42:2021" local="130472198867105142" remote="130522008000000000" Dst="0" />

@@ -343,11 +343,11 @@ NOTE: while translations on Resources are possible they should be used for rende
   </item>
   <item id="OperationDefinition">
     <translation lang="en">OperationDefinition</translation>
-    <translation lang="zh-tw">手術定義</translation>
+    <translation lang="zh-tw">操作定義</translation>
   </item>  
   <item id="OperationOutcome">
     <translation lang="en">OperationOutcome</translation>
-    <translation lang="zh-tw">手術成果</translation>
+    <translation lang="zh-tw">操作結果</translation>
     <translation lang="zh">手术成果</translation>
     <translation lang="es">ResultadoOperación</translation>
     <translation lang="fr">RésultatOpération</translation>
